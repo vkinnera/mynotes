@@ -1714,7 +1714,146 @@ output application/json
   "lastDay": lastDay(payload.lastday)
 }
 
+alternate solution:
+%dw 2.0
+import * from dw::core::Dates
+output application/json
+---
+{
+    "lastdayofmonth": atBeginningOfMonth(payload.lastday as Date {format: "dd-MM-yyyy"} + |P1M|  )- |P1D|
+}
 
+
+
+Instance Id in cloud hub/ what is auto discovery in mulesoft?
+Instance Id is the one which will connect the application which was connected in the API
+manager and the application running in the runtime. which is called Auto Discovery.
+
+The process of allowing API manager application to discover the application is running in 
+the runtime using Instance Id is known as AUTO discovery.
+
+create 	auto discovery global element using API instance ID.
+provide runtime bussiness group client_id
+Organization bussiness group client_secret.
+
+how to secure client Id and secret?
+we can secure the client Id and secret by configuring the client Id and client secret
+in mule-artifact.json file -> securePropertes.
+
+We can Apply policies in the instance running in the runtime manager.
+
+Basic Authentication policy?
+In basic authentication policy we use username and password to secure an API.	
+
+The API management is sitting as a API GATEWAY in between and validating against to the policy
+that we applied if the policy met then it is sending the request to runtime manager instance.
+
+if we wrong user Id and password it will give 501 unauthorized.
+
+ Add/Update values in objects from other array objects based on matching ID field?
+ Input:-
+{
+ "id": "0001",
+ "type": "donut",
+ "name": "Cake",
+ "ppu": 0.55,
+ "products": [
+ {
+ "id": "5001",
+ "type": "None"
+ },
+ {
+ "id": "5002",
+ "type": "Glazed"
+ },
+ {
+ "id": "5005",
+ "type": "Sugar"
+ },
+ {
+ "id": "5007",
+ "type": "Powdered Sugar"
+ },
+ {
+ "id": "5006",
+ "type": "Chocolate with Sprinkles"
+ },
+ {
+ "id": "5003",
+ "type": "Chocolate"
+ },
+ {
+ "id": "5004",
+ "type": "Maple"
+ }
+ ],
+ "price": [
+ {
+ "id": "5001",
+ "cost": 2
+ },
+ {
+ "id": "5005",
+ "cost": 5
+ },
+ {
+ "id": "5007",
+ "cost": ""
+ },
+ {
+ "id": "5004",
+ "cost": 6
+ },
+ {
+ "id": "5008",
+ "cost": ""
+ }
+ ]
+}
+Output:-
+[
+ {
+ "id": "5001",
+ "type": "None",
+ "price": 2
+ },
+ {
+ "id": "5002",
+ "type": "Glazed",
+ "price": null
+ },
+ {
+ "id": "5005",
+ "type": "Sugar",
+ "price": 5
+ },
+ {
+ "id": "5007",
+ "type": "Powdered Sugar",
+ "price": ""
+ },
+ {
+ "id": "5006",
+ "type": "Chocolate with Sprinkles",
+ "price": null
+ },
+ {
+ "id": "5003",
+ "type": "Chocolate",
+ "price": null
+ },
+ {
+ "id": "5004",
+ "type": "Maple",
+ "price": 6
+ }
+]
+DW: payload.products map ((item, index) -> {
+ "id":item.id,
+ "type":item."type",
+ "price":(payload.price filter $.id == item.id).cost[0]
+ }
+)
 
 hi everyone 
 I am vamsi
