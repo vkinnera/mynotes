@@ -1505,6 +1505,215 @@ b:payload map ((item, index) -> {
 SOAP SERVICE?
 WSDL - web service description language that defines the soap service
 
+Print the alphabets with their count of occurrence in the array
+Input:-
+["a","b","c","a","b","a"]
+Output:-
+["a3","b2","c1"]
+Dataweave:
+%dw 2.0
+import * from dw::core::Arrays
+var a = payload distinctBy ((item, index) -> item) 
+var b = a map ((item, index) -> item ++ (payload countBy($ == item)))
+output application/json
+---
+b
+
+
+REST EXAMPLE: URL - http://localhost:8098/happyfriendshipday
+for rest it will generate the API KIT ROUTER
+SOAP EXAMPLE: URL - http://localhost:8098/happyfriendshipday?wsdl
+FOR SOAP it will generate the soap router
+
+Write If Condition without Else
+
+Input:-
+
+{
+  "Name": "Shubham",
+  "Age": "26"
+}
+Output:-
+
+{
+  "Name": "Shubham"
+}
+DW: 
+%dw 2.0
+import * from dw::core::Arrays
+output application/json
+---
+//{name: if(payload.Name == "Shubham") payload.Name else null}
+name: [(payload.Name) if(payload.Age > 25)][0]
+
+
+match function:
+Uses a Java regular expression (regex) to match a string and then separates it in
+to capture groups. Returns the results in an array.
+
+Separate Multiple Values with Single Key into Different Objects
+Input:-
+
+{
+"NameList": "Shubh,Priya"
+}
+Output:-
+
+%dw 2.0
+output application/json
+var valuesList=payload.NameList splitBy  ','
+---
+valuesList map ((item, index) -> 
+    {
+        (("Student ") ++(index)): item
+    }
+)
+Dataweave Code:-
+
+[
+  {
+    "Student 0": "Shubh"
+  },
+  {
+    "Student 1": "Priya"
+  }
+]
+
+what is filterTree function in mule?
+Filters the value or path of nodes in an input based on a specified criteria
+example:
+Usage of FilterTree Function
+
+Input:-
+
+{
+  "firstName": "",
+  "lastName": "Shubham",
+  "friends": [
+    {
+      "id": "",
+      "test": {
+          "val":""
+      }
+    },
+    {
+      "age": "123"
+    },
+    ""
+  ]
+}
+Output:-
+
+{
+  "lastName": "Shubham",
+  "friends": [
+    {
+      "test": {
+        
+      }
+    },
+    {
+      "age": "123"
+    }
+  ]
+}
+Dataweave Code:-
+
+%dw 2.0
+import * from dw::util::Tree
+output application/json
+---
+payload filterTree ((value, path) ->
+            value match  {
+                            case s is String -> !isEmpty(s)
+                            else -> true
+                          })
+
+Capitalize the leaf values of nested object: Usage of mapLeafValues function and remove 
+empty values
+Input:-
+
+{
+     "user": [{
+         "name": "Shubham",
+         "lastName": {
+             "Middle":"",
+             "Last":"Chaurasia"
+         }
+     }],
+     "group": "dataweave series"
+ }
+Output:-
+
+{
+  "user": [
+    {
+      "name": "SHUBHAM",
+      "lastName": {
+        "Last": "CHAURASIA"
+      }
+    }
+  ],
+  "group": "DATAWEAVE SERIES"
+}
+DW:
+%dw 2.0
+import * from dw::util::Tree
+output application/json
+---
+(payload mapLeafValues ((value, path) -> upper(value))) filterTree ((value, path) ->
+            value match  {
+                            case s is String -> !isEmpty(s)
+                            else -> true
+                          })
+
+READ VS READURL?
+read is used to read binary, string and return the parsed content.
+Source
+%dw 2.0
+output application/json
+var inputData=
+"name,age,salary
+Joseph,34,3000
+James,32,5000"
+---
+read(inputData,"application/csv")
+Output:
+[{"name":"Joseph","age":"34","salary":"3000"},{"name":"James","age":"32",
+"salary":"5000"}]
+READURL - readUrl read the URL and return the parsed content.
+Source:
+%dw 2.0
+output application/json
+---
+readUrl("https://jsonplaceholder.typicode.com/posts/1",
+"application/json")
+Output:
+{ "userId": 1, "id": 1, "title": "sunt aut ...", "body": "quia et ..." }
+
+Print Last Date of the Month given a date as input
+
+Input:-
+
+{
+    "lastday": "10-02-2023"
+}
+Output:-
+
+{
+  "lastDay": 28
+}
+Dataweave Code:-
+
+%dw 2.0
+fun lastDay(date) =
+  (((date as Date {format: "dd-MM-yyyy"} as String {format: "01-" ++ "MM-yyyy"}) as Date {format: "dd-MM-yyyy"}) + |P1M| - |P1D|).day
+output application/json  
+---
+{
+  "lastDay": lastDay(payload.lastday)
+}
+
 
 
 hi everyone 
