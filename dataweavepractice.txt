@@ -1887,6 +1887,104 @@ now the refund is done from the backend and we get response like "refund is Inti
 
 transform message takes the request message and transformed into required mule format.
 
+Sum of Numbers Using Recursion
+Input:-
+[]
+Output:-
+55
+%dw 2.0
+var arr = 1 to 10
+fun recsum(arr, total=0) =
+if(not (isEmpty(arr))) recsum(arr[1 to -1],(total + arr[0])) else (total)
+output application/json
+---
+//sum(arr)
+recsum(arr)
+
+mule properies - property or yaml file in src/main/resources
+create "configuration properites" in global elememt.
+Use ${key} expression to extract the property from propety or YAML file.
+Use Mule::p('key')  dataweave script to extract in DW.
+
+configure host and port in properties file
+http.port = 8081
+http.host = localhost
+db.uhub.port = 10211
+
+configure host and port in YAML file
+http:
+	port: "8081"
+http:
+	host: "localhost"
+db:
+	uhub:
+		port: "10211"
+		host: "oracle"
+		username: "dfsh909knfkn"
+		password: "dih90unkd"
+		service: "XE"
+
+
+configure 
+YAML file configuration is lite weight compared to properties file.
+YAML file value configured in ""
+
+${http.port}
+Mule::p('http.port')
+
+Mule properties - Secure configuration properties
+
+properties management: 
+externalizing properties from mule configuration helps us in better code management and need not touch 
+applications on configurations properties changes.
+1. create a property/YAML file
+2. encrypt property values - choose 16 digit encryption key : abcde0123456789 and use algorithm and mode to encrpt password using above key.
+3. create secure configuration property global element
+4. Use ${secure::key} expression extract the property form the property file.
+5 Use Mule::p('secure::key') dataweave script to extract in dataweave.
+
+dataweave to flatten an Object.
+Input:- 
+{
+ "item": {
+ "type": "book",
+ "price": 49.99,
+ "properties": {
+ "title": "XQuery Kick Start",
+ "author": ["raj","shubh"],
+ "year": 2003
+ }
+ }
+}
+Output:-
+
+{
+ "type": "book",
+ "price": 49.99,
+ "title": "XQuery Kick Start",
+ "author": [
+ "raj",
+ "shubh"
+ ],
+ "year": 2003
+}
+Dataweave Code:-
+
+%dw 2.0
+import * from dw::core::Objects
+output application/json
+fun flattenObject(data)= keysOf(data) reduce (obj,acc={}) ->acc ++ (
+if (typeOf(data[obj])~="String" or typeOf(data[obj])~="Number" or typeOf(data[obj])~="Array") 
+ {
+ (obj):data[obj]
+ }
+ else 
+ flattenObject(data[obj])
+ )
+- -
+flattenObject(payload)
+
+
 
 
 
