@@ -1943,6 +1943,18 @@ applications on configurations properties changes.
 4. Use ${secure::key} expression extract the property form the property file.
 5 Use Mule::p('secure::key') dataweave script to extract in dataweave.
 
+encrpted value will be like this
+![SJCENXkNHvTFh6ldYFpgMQ==]
+
+${secure::http.port}
+${secure::db.uhub.password}
+
+Mule::p('secure::http.host')
+
+secure config properties can be accessed by runtime arguments.
+
+
+
 dataweave to flatten an Object.
 Input:- 
 {
@@ -1983,6 +1995,51 @@ if (typeOf(data[obj])~="String" or typeOf(data[obj])~="Number" or typeOf(data[ob
  )
 - -
 flattenObject(payload)
+
+Remove Count Key from each object
+
+Input:-
+
+{
+ "notification": [{
+ "status": {
+ "code": "BILLING",
+ "value": "Past Due"
+ },
+ "count": 1
+ }],
+ "notification1": [{
+ "status": {
+ "code": "RENEWAL",
+ "value": "Past Due"
+ },
+ "count": 1
+ }]
+}
+Output:-
+
+{
+ "notification": [{
+  "status": {
+   "code": "BILLING",
+   "value": "Past Due"
+  }
+ }],
+ "notification1": [{
+  "status": {
+   "code": "RENEWAL",
+   "value": "Past Due"
+  }
+ }]
+}
+Dataweave Code:-
+
+payload mapObject ((value, key, index) -> 
+ (key): value map ((item, index1) ->
+ item -"count"
+ )
+)
+
 
 
 
