@@ -2080,7 +2080,177 @@ output application/json
  )
 )
 
+Dataweave Code:-
 
+payload mapObject ((value, key, index) -> 
+ (key): value map ((item, index1) ->
+ item -"count"
+ )
+)
+Flatten a nested JSON Array using Recursion
+
+Input:-
+
+[
+ [
+  [
+   [
+    [{
+     "a": 1
+    }]
+   ],
+   [{
+    "b": 2
+   }]
+  ],
+  [
+   [{
+    "c": 3
+   }]
+  ]
+ ],
+ [{
+  "d": 4
+ }]
+]
+Output:-
+
+[{
+  "a": 1
+ },
+ {
+  "b": 2
+ },
+ {
+  "c": 3
+ },
+ {
+  "d": 4
+ }
+]
+Dataweave Code:-
+
+%dw 2.0
+output application/json
+fun flattenRecursion(arr: Array) = do {
+ arr reduce ((item, acc = []) -> 
+ item match {
+ case x is Array -> acc ++ flattenRecursion(x)
+ else -> acc << item
+ }
+ )
+}
+ - -
+flattenRecursion(payload)
+
+ratelimiting SLA based policy:
+Rate limiting and SLA based policy is a combination of ratelimiting and client Id enforcement.
+based on client client id and secret we can define the number of requests allowed by a system.
+
+client id and client on All API resources or specific API resources.
+
+JSON and XML threat protection policy:
+Application proceesing JSON and XML requests are susceptable to attacks characterized by unusal inflation of elements
+and nested levels Attackers use recursive techniques to consume memory resources. Drastic swings in a size of application 
+data often signal a security problem. JSON threat protection helps us to protect your applcations from such intrutions.
+
+
+IP allow list and Ip block list policies:
+IP allow list: The Ip allow list allows a list or a range of specified IP adressess access to a protected resource
+when a match IP is found between a source IP (specified when configuring a policy) and list of individual IP's or 
+range of Ip's
+
+The IP allow list policy controls access to an  configured API form either a single Ip address or a range of IP address
+
+IP block list policy:
+IP block list policy retricts access to the protected resouce when a match is found between a souce IP(specified
+when configuring a policy) and either a list of individual Ip's or a range of IP's.
+
+IP block list policy controls access to a configured API end points form either a single Ip address or a range of IP address
+configure to all API methods & resources
+configure to specific API methods or resources
+
+
+Auto mated policies across API's 
+If want create a automated policy by default we use automated policy.
+CROS origin resouce sharing 
+It is use ful to allow the front end technologies to consume the services.
+
+Header Injection and Header removal policy:
+Adding and removing the inbound and outbound content headers.
+
+Message logging policy:
+we can inject the message logs like headers by using the message logging policy.
+
+
+Calculate the Total Price of each individual order
+
+Input:-
+<?xml version='1.0' encoding='UTF-8'?>
+<Orders>
+ <Order id="10001">
+ <ProductId id="P001">P-001</ProductId>
+ <ProductName>Samsung 40Inch TV</ProductName>
+ <Category id="C001">Samsung TV</Category>
+ <Price>399</Price>
+ <Quantity>5</Quantity>
+ </Order>
+ <Order id="10001">
+ <ProductId id="P002">P-002</ProductId>
+ <ProductName>Samsung 32Inch TV</ProductName>
+ <Category id="C001">Samsung TV</Category>
+ <Price>299</Price>
+ <Quantity>5</Quantity>
+ </Order>
+</Orders>
+Output:-
+[{
+  "totalCost": 1995
+ },
+ {
+  "totalCost": 1495
+ }
+]
+DW:
+%dw 2.0
+var load = payload
+input json
+output json
+---
+//(load.Orders pluck ((value, key, index) -> value)) map ((item1, index1) -> {"total price": item1.Price * item1.Quantity})
+
+load.Orders.*Order map ((item, index) -> {
+    "totalCost": item.Price * item.Quantity
+})
+Calculate the Total Price of All Orders
+
+Input:-
+
+Same as given on previous ques
+Output:-
+
+{
+ "totalCost": 3490
+}
+DW:
+%dw 2.0
+var load = payload
+input json
+output json
+---
+//(load.Orders pluck ((value, key, index) -> value)) map ((item1, index1) -> {"total price": item1.Price * item1.Quantity)
+//reduce ((item, accumulator=0) -> 
+//accumulator+(item."total price"))
+
+//load.Orders.*Order map ((item, index) -> {
+//    "totalCost": item.Price * item.Quantity
+//}) reduce ((item, accumulator = 0) -> 
+//accumulator + (item.totalCost)
+//)
+
+"totalCost": sum(payload.Orders.*Order map ((item, index) -> 
+item.Price * item.Quantity
+))
 
 
 
