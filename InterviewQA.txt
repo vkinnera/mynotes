@@ -2,6 +2,23 @@ Interview Questions Q/A
 
 ACCENTURE INTERVIEW - OLD
 Mulesoft API end to end process. 
+it may be the mixed of two questions.
+API LIFE CYCLE?
+--> create RAML - RESTFUL API MODELLING LANGUAGE  - we provide resource, input, output, datatype
+-> 	Publish RAML to exchange
+-> Review RAML and getting the feedback
+-> if positive - build stage else go to design stage ie., RAML 
+-> In build stage we do the API development.
+-> After development of API we do the testing stage - MUNIT testing
+->  we will secure API's applying policy like client id enforcement, ratelimiting etc
+-> After deploying in cloudHub -> 	we should moniter application in cloudHub 
+--> troubleshooting - bugs and then managing the API's.
+
+generally we will call an API using HTTP requestor connector
+form process to system and from experience to process layer 
+generally we will call using HTTP requestor.
+some time we develop connector like we create for system layer and publish to exchange.
+use that connector in process layer.
 
 traits vs fragments. 
 
