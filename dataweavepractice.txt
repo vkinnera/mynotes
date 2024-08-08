@@ -2182,6 +2182,28 @@ Adding and removing the inbound and outbound content headers.
 Message logging policy:
 we can inject the message logs like headers by using the message logging policy.
 
+Oath Policy third party Providers?
+Oath provider: Oath provider can be provided by mule runtime manager or third party app.
+
+Details required for getting the Oath token is
+
+clientId
+client Secret
+audience
+grant Type
+
+after providing above details we get the < access token along with the scope of access token
+and expires in and type as bearer > as a response.
+
+Once we apply Oath policy on top of our API then we need to provide the bearer token, enable 
+JWT validation for Auth0 and then only we can consume our service.
+
+AuthO is the JWT provider so we choose JWT validation
+JWKS option only supported if the JWT Signing method was set to RSA
+and cliend It is skipped in JWT configuration and audience claim should be validated and 
+provided
+
+Authorization as key and bearer <access token> as value in header section
 
 Calculate the Total Price of each individual order
 
@@ -2251,6 +2273,7 @@ output json
 "totalCost": sum(payload.Orders.*Order map ((item, index) -> 
 item.Price * item.Quantity
 ))
+
 
 
 
