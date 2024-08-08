@@ -1,7 +1,8 @@
 Interview Questions Q/A
 
 ACCENTURE INTERVIEW - OLD
-Mulesoft API end to end process. 
+1) Mulesoft API end to end process. 
+ANS:
 it may be the mixed of two questions.
 API LIFE CYCLE?
 --> create RAML - RESTFUL API MODELLING LANGUAGE  - we provide resource, input, output, datatype
@@ -20,7 +21,8 @@ generally we will call using HTTP requestor.
 some time we develop connector like we create for system layer and publish to exchange.
 use that connector in process layer.
 
-traits vs fragments. 
+2) traits vs fragments. 
+Ans:
 
 how do we do validation in raml. 
 
@@ -139,21 +141,22 @@ have you involved in documentation side or deployment side?
 have you created any proxys in api manager? 
 
 ACCENTURE INTERVIEW - NEW - ME
-intro
-tell me about project
-RAML - traits, datatypes
-What are policies are used in your project - clientId enforcement, basic authentication, Oath policy.
-How can we define multiple queryParams in URL
-What kind deployment models are there in mulesoft
-Why we use API LED Architecture
-More about designing RAML like syntax based questions that are used in traits and datatypes
-Regarding Oath policies
-Which third party vendor for getting Oath token
-API auto discovery
-How to trigger an API what is the connector used to trigger an API.
-Syntax FOR FRAMING URL
-What methods are used for the specific use case
-Have you worked on file FTP and SFTP connectors
+intro?
+tell me about project?
+RAML - traits, datatypes?
+What are policies are used in your project - clientId enforcement, basic authentication, Oath policy.?
+How can we define multiple queryParams in URL?
+What kind deployment models are there in mulesoft?
+Why we use API LED Architecture?
+More about designing RAML like syntax based questions that are used in traits and datatypes?
+Regarding Oath policies?
+Who is your Oath provider?
+Which third party vendor for getting Oath token?
+API auto discovery?
+How to trigger an API what is the connector used to trigger an API.?
+Syntax FOR FRAMING URL?
+What methods are used for the specific use case?
+Have you worked on file FTP and SFTP connectors?
 
 INFOSYS INTERVIEW:
 self Intro 
