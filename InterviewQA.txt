@@ -191,7 +191,37 @@ how to configure ssl and tls in listner
 how do you update raml and import
 
 
+hi everyone 
+I am vamsi
+Iam from nellore 
+i studied bachlor of technology in electronics and communication engineering from svce in tirupathi.
+I have 3 + years of experience at capgemini and Iam having 2+ years relevant experience in mulesoft.
+Currently iam working  as mulesoft developer in capgemini and 
 
+coming to my project I am working in telecom domian project and the  client is CWC - cable and wireless
+for that particular client I am working in project called cco digital
+and my resposibity in capegemini is to develop design and testing API's using mulesoft software.
+my project follows API life cycle to develop API's.
+
+i have worked on a api called Post refund in which we have used api led connectivity structure 
+in these we have three layers 
+redmound ux as experience layers 
+payment management biz as process layer 
+aria management sys as a system layer 
+in this we get inputs from frontend called fastgo payments 
+
+From the frontend we get required inputs like business id, payment id, targetSystem which are passed into the ux, 
+In ux we do the validations for inputs and later it is routed to the biz layer using request connector. 
+
+In payement management biz depending upon the business id and target system we will route it to the sys layer 
+
+aria management system is connected to the backend and retrive the data, 
+in this we mapped using transform message and created a request to the backend to get the account no and details which is required for refund 
+after getting the acc details we have done the validations for date. 
+after the validations are done and again we mapped with the account details and payement id using transform message and created request to the backend 
+now the refund is done from the backend and we get response like "refund is Intiated". 
+
+transform message takes the request message and transformed into required mule format.
 
 
 
