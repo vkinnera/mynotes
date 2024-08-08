@@ -1,0 +1,199 @@
+Interview Questions Q/A
+
+ACCENTURE INTERVIEW - OLD
+Mulesoft API end to end process. 
+
+traits vs fragments. 
+
+how do we do validation in raml. 
+
+how do we hand over raml to client after designing. 
+
+post vs put vs  patch. 
+
+need of put & post. 
+
+foreach vs parallel foreach   
+
+scatter-gather. 
+
+spike control vs rate limiting policy. 
+
+Munits. 
+
+deployment model (through jenkinspipeline).   
+
+vcore vs worker. 
+
+error handling. 
+
+VM vs flow refference. 
+
+Active MQ. 
+
+issues faced in production,deployment. 
+
+object store,cache. 
+
+load balancer. 
+
+data weave (string to array, reverse, multivalue selector). 
+
+scenario based questions on try scope,scatter-gather, re-connection stratgy. 
+
+self Intro 
+
+roles and responsibilites in project 
+
+message structure in IBM mq? 
+
+default port no for IBM mq? 
+
+what are the basic steps to develop an API? 
+
+how can you secure your password? 
+
+what is the pooling mechanism? it is like how can you secure a password 
+
+what are the 5 ways of security authentications 
+
+what is TLS and MTLS? 
+
+what is the keyStore and trustStore? 
+
+error handlings in mule?  
+
+have you heard about API Groups? 
+
+have you develop any custom connector? 
+
+dataweave streaming in mule?   
+
+xplain Oauth2.0 provider in mule? why we are using? 
+
+what are grant Types in Oauth2.0? 
+
+rate limiting policy? 
+
+what is horizontal and vertical scaling? 
+
+xplain batch processing? 
+
+what happens if a batch is having 200 records if one got failed? 
+
+how many records can we process in a batch? 
+
+can we call batch fom trigger? 
+
+map vs mapObject? 
+
+what is Idempotency?what is this use 
+
+what is scheduler? 
+
+which flow can we call from lookup function? 
+
+how to handel error in process layer? 
+
+what is the output for for each? 
+
+what is the file we used to secure password? 
+
+what is CI/Cd pipeline?have you used in your project? 
+
+how to improve the performance of an application? 
+
+how do you setup the dependencies in your project? 
+
+if you need to save the state of the transaction and then resume it if it fails? 
+
+what is synchronous and asynchronous?  
+
+what is diff b/w api kit router and api ki console? 
+  
+can we validate the incoming payload from RAML? 
+
+what dataweave inbuild functions you used? 
+
+how can we call flows from dataweave? 
+
+have you involved in documentation side or deployment side? 
+
+have you created any proxys in api manager? 
+
+ACCENTURE INTERVIEW - NEW - ME
+intro
+tell me about project
+RAML - traits, datatypes
+What are policies are used in your project - clientId enforcement, basic authentication, Oath policy.
+How can we define multiple queryParams in URL
+What kind deployment models are there in mulesoft
+Why we use API LED Architecture
+More about designing RAML like syntax based questions that are used in traits and datatypes
+Regarding Oath policies
+Which third party vendor for getting Oath token
+API auto discovery
+How to trigger an API what is the connector used to trigger an API.
+Syntax FOR FRAMING URL
+What methods are used for the specific use case
+Have you worked on file FTP and SFTP connectors
+
+INFOSYS INTERVIEW:
+self Intro 
+Components in raml? 
+api life cycle 
+whats are the ways to import raml to studio and explain them 
+apikit console --scenario based 
+api exchange, cloudhub --scenario based 
+how scaling can be done 
+about logs --scenario based 
+dataweave -- on map, odd even, pluck in playground 
+diff between rest and soap 
+parallel for each --scenario based 
+database connector --scenario based 
+batch processing --scenario based 
+http listner configurations 
+policies used in project 
+how do you protect your code in project 
+how do you get api instance id 
+how do you connect your runtime api to configure policies 
+how do you generate flows in studio if they are not generated automatically 
+error handling --scenario based 
+Type of error handling used in your project 
+api led connectivity --scenario based 
+salesforce connector 
+cache and object store 
+munits in project 
+flows in project 
+ssl and tls 
+keystore and Truststore and how do you get keys 
+how to configure ssl and tls in listner 
+how do you update raml and import
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
