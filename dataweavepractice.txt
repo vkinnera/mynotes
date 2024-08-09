@@ -2275,6 +2275,11 @@ item.Price * item.Quantity
 ))
 
 
+what is Proxy API's?
+Proxy APIs is a wrapper on 	actual, we can go proxy API's in below scenarios.
+when we would like to expose wrapper/proxy API on external services with our own API management.
+when we would like to expose with different end points on our mule applications.	
+when would like to apply set of other policies on same services.
 
 
 
