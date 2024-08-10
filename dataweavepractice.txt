@@ -2281,6 +2281,13 @@ when we would like to expose wrapper/proxy API on external services with our own
 when we would like to expose with different end points on our mule applications.	
 when would like to apply set of other policies on same services.
 
+it will create the runtime instance application as a proxy api on top of particular 
+implementation URL then deploys application to runtime manager.
+
+
+promote API from environment?
+to create an API from environment to another environmnent.
+
 
 
 
