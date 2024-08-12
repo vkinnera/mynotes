@@ -2288,7 +2288,9 @@ implementation URL then deploys application to runtime manager.
 promote API from environment?
 to create an API from environment to another environmnent.
 
-
+how do we define root element in RAML?
+xml:
+	name: employee
 
 
 
