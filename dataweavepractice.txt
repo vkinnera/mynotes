@@ -2293,7 +2293,13 @@ xml:
 	name: employee
 
 
+how to define array in RAML?
+type: array
+items:
+    type: object
 
+what are fragments?
+fragments are the reusable components of RAML. To make design and build of a resusable API even quicker and easier.
 
 
 
