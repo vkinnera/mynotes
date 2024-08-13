@@ -2301,7 +2301,57 @@ items:
 what are fragments?
 fragments are the reusable components of RAML. To make design and build of a resusable API even quicker and easier.
 
+categorized into two types - local and global
+and types of fragments are
+Traits
+ResourceType
+Library
+DataType
+user documentation
+Example
+Annotation Type
+Security Scheme
 
+what is dataType?
+its basically the structure/schema of input request and response.
+
+What is library?
+It is a collection of dataTypes in RAML.
+
+How can we refer a library in RAML?
+By using the uses: keyword we can refer the library.
+uses:
+  uhub-sapi-data-types: uhub-sapi-datatypes-library/uhub-sapi-datatypes-library.raml
+and library document we use types: keyword to refer multiple datatypes.
+usage:  Types for uho sapi
+types:
+  register-covid-case-request-type:
+    type: object
+    description: This type used to register and update covid case
+    properties:
+
+what is traits and how we refer or include traits in RAML ?
+Traits are used to store common headers or queryParams or UriParams.
+we can include / refer traits by using the traits: keyword.
+traits:
+  correlation-id-header:
+and to include traits inside resource we use is:[correlation-id-header] keyword
+
+what is security scheme fragment?
+when ever we develop a REST service we apply the security on the top of REST service.
+
+apply SSL certification either individually or mulesoft dedicated load balancer and
+those services will be exposed as HTTPS services.
+basic authentication
+client Id enforcement
+Oath security policies
+
+traits are created for client id enforcement
+securitySchemes:
+  oauth2.0: !include <>
+  
+to inject the oauth2.0 to each resource we use securedBy: keyword.
+securedBy: [oauth2.0]
 
 
 
