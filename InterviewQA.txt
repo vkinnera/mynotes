@@ -1,3 +1,4 @@
+
 Interview Questions Q/A
 
 ACCENTURE INTERVIEW - OLD
@@ -157,6 +158,8 @@ How to trigger an API what is the connector used to trigger an API.?
 Syntax FOR FRAMING URL?
 What methods are used for the specific use case?
 Have you worked on file FTP and SFTP connectors?
+What are the environments that are using in your projects?
+
 
 INFOSYS INTERVIEW:
 self Intro 
