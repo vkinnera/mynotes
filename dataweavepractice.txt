@@ -2353,7 +2353,13 @@ securitySchemes:
 to inject the oauth2.0 to each resource we use securedBy: keyword.
 securedBy: [oauth2.0]
 
-
+GIT Commands:
+git clone: Used to clone projects from repo's
+git checkout: Used to checkout specific branch
+git status: used to check changed files information
+git add: To add changed files to check in list.
+git commit -m "commit message" used to check commit added files of check list
+git push: To push committed changes to the repository.
 
 
 
