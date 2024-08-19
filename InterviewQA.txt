@@ -24,8 +24,34 @@ use that connector in process layer.
 
 2) traits vs fragments. 
 Ans:
+TRAITS:
+traits is reusable component where we can define headers, queryParams, URI params inside traits.
 
-how do we do validation in raml. 
+Traits is used for headers and queryParameters -- 
+Traits should be imported using "Traits" keyword(by creating key: !include filePath) 
+and it is referred using "is" keyword with these[]( is:[headersname,.....,...]traits:
+for calling the external traits we will use is: [] keyword.A trait can have all kinds of attributes.
+
+Traits are used to store common headers or queryParams or UriParams.
+we can include / refer traits by using the traits: keyword.
+traits:
+  correlation-id-header:
+and to include traits inside resource we use is:[correlation-id-header] keyword
+
+FRAGMENTS:
+fragments are the reusable components of RAML. To make design and build of a resusable API even quicker and easier.
+categorized into two types - local and global
+and types of fragments are
+Traits
+ResourceType
+Library
+DataType
+user documentation
+Example
+Annotation Type
+Security Scheme
+
+how do we do validation in raml? 
 
 how do we hand over raml to client after designing. 
 
