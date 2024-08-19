@@ -2362,7 +2362,88 @@ git commit -m "commit message" used to check commit added files of check list
 git push: To push committed changes to the repository.
 
 
-
+Filter Unique Records. (Explanation:- Records should be unique globally. Pick the first unique title and discard the remaining)
+Input:
+[{
+  "id": 1,
+  "books": [{
+   "bookid": "1234",
+   "title": "C#"
+  }, {
+   "bookid": "4321",
+   "title": "VB"
+  }]
+ },
+ {
+  "id": 2,
+  "books": [{
+    "bookid": "4321",
+    "title": "VB"
+   },
+   {
+    "bookid": "5678",
+    "title": "Java"
+   }
+  ]
+ },
+ {
+  "id": 3,
+  "books": [{
+    "bookid": "1234",
+    "title": "C#"
+   },
+   {
+    "bookid": "56781",
+    "title": "Java"
+   }
+  ]
+ }
+]
+output:
+[
+  {
+    "id": "1",
+    "books": [
+      {
+        "bookid": "1234",
+        "title": "C#"
+      },
+      {
+        "bookid": "4321",
+        "title": "VB"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "books": [
+      {
+        "bookid": "5678",
+        "title": "Java"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "books": [
+      {
+        "bookid": "56781",
+        "title": "Java"
+      }
+    ]
+  }
+]
+DW:
+%dw 2.0
+output json
+var globalList = payload flatMap((item)->
+item.books map (b) -> {id: item.id,(b)}) distinctBy ((item, index) -> item.bookid) groupBy ((item, index) -> item.id)
+---
+keysOf(globalList) map ((item, index) -> 
+{
+    id: item,
+    books: globalList[item] map ((book) -> book - "id")
+})
 
 
  
