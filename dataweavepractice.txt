@@ -2446,7 +2446,31 @@ keysOf(globalList) map ((item, index) ->
 })
 
 
- 
+ input:
+[{
+  "Name": "Shubham",
+  "language": "Java",
+  "Id": "101"
+ },
+ {
+  "Name": "Sravan",
+  "language": "C",
+  "Id": "104"
+ }
+]
+output:
+"Name Shubham language Java Id 101 Name Sravan language C Id 104"
+Dataweave:
+%dw 2.0
+output application/json
+---
+//((payload  reduce ($ ++ $$)) pluck ((value, key, index) -> (key) ++ " " ++ value )) joinBy  " "
+
+(((payload map ((item, index) -> item))[0] pluck ((value, key, index) -> (key) ++ " " ++ value))  joinBy  " ")
+++ " " ++
+(((payload map ((item, index) -> item))[1] pluck ((value, key, index) -> (key) ++ " " ++ value))  joinBy  " ")
+
+// payload flatMap ((item, index) -> item pluck ((value, key, index) -> key ++ " " ++ value)) joinBy  " "
 
 
 
