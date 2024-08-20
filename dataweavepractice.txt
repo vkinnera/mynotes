@@ -2504,7 +2504,53 @@ input:
 789
 output:
 6
+what is command to build and deploy mule application to cloudHub?
+mvn clean package -DmuleDeploy
 
+Input:-
+[
+  {
+    "fName": "Max",
+    "lName": "Mule"
+  },
+  {
+    "fName": "John",
+    "lName": "Paul"
+  },
+  {
+    "fName": "balu",
+    "lName": "Paul"
+  },
+  {
+    "fName": "Max",
+    "lName": "Paul"
+  },
+  {
+    "fName": "piki",
+    "lName": "Paul"
+  }
+]
+output:
+[
+  {
+    "fName": "Max",
+    "lName": "Mule"
+  },
+  {
+    "fName": "balu",
+    "lName": "Paul"
+  }
+]
+dataweave code:
+%dw 2.0
+var a = ["Max", "balu"]
+output application/json
+---
+//payload filter ((item, index) -> item.fName == "Max")
+(payload map ((item, index) ->  {
+    "fName": (a filter ($==item.fName))[0],
+    "lName": item.lName
+  }) filter ((item, index) -> !(item.fName==null)) ) distinctBy ((item, index) -> item.fName)
 
 
 
