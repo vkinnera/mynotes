@@ -2472,6 +2472,39 @@ output application/json
 
 // payload flatMap ((item, index) -> item pluck ((value, key, index) -> key ++ " " ++ value)) joinBy  " "
 
+3. Given a Number, Find its Factorial
+Input:-
+6
+Output:-
+720
+Dataweave Code:-
+%dw 2.0
+output application/json
+fun Factorial(n:Number, prod:Number=1) = (if(n==1 or n==0) prod
+else Factorial(n-1,(prod*n))
+)
+---
+Factorial(payload)
+
+Explain the below code
+%dw 2.0
+import * from dw::core::Strings
+output application/json
+fun sumOfDigits(num, result=0) = 
+do{
+    var new = (num reduce $ + $$) as String
+    ---
+    if(sizeOf(new)>1) sumOfDigits(new, result+new)
+    else new
+}
+---
+sumOfDigits((lines(payload))) as Number
+
+input:
+789
+output:
+6
+
 
 
 
