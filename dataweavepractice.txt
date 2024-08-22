@@ -2572,7 +2572,60 @@ payload groupBy $ pluck $ map ((item) -> {
     ("duplicates": "Number is: "++ item[0] ++ " size is "++ sizeOf(item)) if sizeOf(item)>1
   }) filter ((item, index) -> !(item=={}))
 
-
+Convert the given payload into two formats: first, filter the names where the department is ‘IT’, and second, extract the group names based on the departments listed.
+Input Payload: [
+    {
+        "id" : "123",
+        "name" : "rakesh",
+        "dept" : "cse"
+    },
+    {
+        "id" : "234",
+        "name" : "kumar",
+        "dept" : "cse"
+    },
+    {
+        "id" : "456",
+        "name" : "suraj",
+        "dept" : "IT"
+    },
+    {
+        "id" : "489",
+        "name" : "prakash",
+        "dept" : "IT"
+    }
+]
+Output Payload - 
+1.
+[
+  "suraj",
+  "prakash"
+]
+2. 
+[
+  {
+    "cse": [
+      "rakesh",
+      "kumar"
+    ]
+  },
+  {
+    "IT": [
+      "suraj",
+      "prakash"
+    ]
+  }
+]
+DataWeave Transformation-
+1. %dw 2.0
+output application/json
+---
+(payload groupBy ((item, index) -> item.dept)).IT.name
+DataWeave Transformation-
+2. %dw 2.0
+output application/json
+---
+(payload groupBy ((item, index) -> item.dept)) pluck ((value, key, index) -> (key):(value.name))
 
 	
 
