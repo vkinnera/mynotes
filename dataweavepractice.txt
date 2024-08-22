@@ -2651,11 +2651,98 @@ var input2 = [{"ABC": 1234,"XYZ":false,"ABCXYZ": true,"yyyy":false},{"ABC": 9999
 ---
 (input1 ++ input2) filter ((item, index) -> !(item.ABC == 1234))
 
-	
-
-
-
-
+Input:
+<bookstore>
+    <book>
+        <title>Everyday Italian</title>
+        <year>2005</year>
+        <price>30</price>
+        <author>Giada De Laurentiis</author>
+    </book>
+    <book>
+        <title>Harry Potter</title>
+        <year>2005</year>
+        <price>29.99</price>
+        <author>J K. Rowling</author>
+    </book>
+    <book>
+        <title>XQuery Kick Start</title>
+        <year>2003</year>
+        <price>49.99</price>
+        <author>James McGovern</author>
+        <author>Per Bothner</author>
+        <author>Kurt Cagle</author>
+        <author>James Linn</author>
+        <author>Vaidyanathan Nagarajan</author>
+    </book>
+    <book>
+        <title>Learning XML</title>
+        <year>2003</year>
+        <price>39.95</price>
+        <author>Erik T. Ray</author>
+    </book>
+</bookstore>
+Output:
+<?xml version='1.0' encoding='UTF-8'?>
+<bookstore>
+  <book>
+    <title lang="en" year="2005">Everyday Italian</title>
+    <price>30</price>
+    <author>
+      <author loc="US">Giada De Laurentiis</author>
+    </author>
+  </book>
+  <book>
+    <title lang="en" year="2005">Harry Potter</title>
+    <price>29.99</price>
+    <author>
+      <author loc="US">J K. Rowling</author>
+    </author>
+  </book>
+  <book>
+    <title lang="en" year="2003">XQuery Kick Start</title>
+    <price>49.99</price>
+    <author>
+      <author loc="US">James McGovern</author>
+    </author>
+    <author>
+      <author loc="US">Per Bothner</author>
+    </author>
+    <author>
+      <author loc="US">Kurt Cagle</author>
+    </author>
+    <author>
+      <author loc="US">James Linn</author>
+    </author>
+    <author>
+      <author loc="US">Vaidyanathan Nagarajan</author>
+    </author>
+  </book>
+  <book>
+    <title lang="en" year="2003">Learning XML</title>
+    <price>39.95</price>
+    <author>
+      <author loc="US">Erik T. Ray</author>
+    </author>
+  </book>
+</bookstore>
+Dataweave:
+%dw 2.0
+output application/xml
+---
+{
+    bookstore:{
+       (
+            payload.bookstore.*book map(book) ->{
+                book:{
+                    title @(lang:"en", year:book.year): book.title,
+                    price: book.price,
+                    author: book.*author map ((author) -> author @(loc: "US"):author)
+                }
+        }
+       )
+    }
+}
 
 
 
