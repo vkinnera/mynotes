@@ -2627,6 +2627,30 @@ output application/json
 ---
 (payload groupBy ((item, index) -> item.dept)) pluck ((value, key, index) -> (key):(value.name))
 
+Input:
+Output:
+[
+  {
+    "ABC": 3567,
+    "XYZ": false,
+    "ABCXYZ": true,
+    "yyyy": false
+  },
+  {
+    "ABC": 9999,
+    "XYZ": false,
+    "ABCXYZ": true,
+    "yyyy": false
+  }
+]
+Dataweave:
+%dw 2.0
+output application/json
+var input1 = [{"ABC": 1234,"XYZ":false,"ABCXYZ": true,"yyyy":false},{"ABC": 3567,"XYZ":false,"ABCXYZ": true,"yyyy":false}]
+var input2 = [{"ABC": 1234,"XYZ":false,"ABCXYZ": true,"yyyy":false},{"ABC": 9999,"XYZ":false,"ABCXYZ": true,"yyyy":false}]
+---
+(input1 ++ input2) filter ((item, index) -> !(item.ABC == 1234))
+
 	
 
 
