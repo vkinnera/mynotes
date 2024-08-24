@@ -1,1 +1,159 @@
+What is difference between function and variable in DW?
+we cant pass input parameter  in variable but in function we can pass input parameter
+what is traits and datatypes in mulesoft
+resource is a collection of traits and data types
+traits - headers, uriparams and queryParams are defined in traits
+datatypes
+ datatypes define structure of body it can define request or response like http status code
+ 200, 400 , 500 etc
 
+what is difference between for each parallel for each and batch processing
+
+for each process is single threaded and it process the records one by one and parallel for 
+each is multi threaded and it process multiple records at the same time in parallel way
+
+batch processing process the multiple records at the same time and it contains batch step - 
+it contains processors and aggregators batch job and On complete stage
+
+processors process the records based on accept policy and aggregrator combine the records.
+
+in On Complete we do the meta data processing 
+
+what is implementation URL
+when we deploy mule application jar in cloud hub it generates one URL that is our implementation 
+URL.
+we use this URL with basepath to call an API.
+
+to remove non funtional requirement 	(apply policy , SLA ) we can create proxy url on 
+top of implementaion URL.
+
+API auto discovery?
+to connect the application deployed in mule runtime with API manager.
+In cloud hub deployment we  have api manage where we apply policies and non functional requirements
+In mule runtime where we deploy mule application code
+if we want to connect application deployed in mule runtime we need auto discovery.
+request - gateway - API Manager ( check and full fill policy and SLA )  if it is full fill it will go to
+API Implementation in mule runtime.
+API manager has this client Id enforcement.
+
+difference  between v core and worker
+v core is a unit of worker
+worker is a smallest unit where we can deploy our mule application
+0.1 vcore - 500 mb heap memory
+0.2 vcore - 1gb heap memory
+1 vcore - 2gb heap memory
+
+MUNIT
+Assert Operations
+Assert: validate mule event content
+equals
+expression
+that
+mock when
+mock event processor when it matches the defined name and attributes
+spy
+what happens when befor and after event process is called
+verify
+verify if the process is called
+Fail
+allow you to fail test case on purpose
+behavior 
+see all conditions before executing test logic.
+mock and spy goes into this condition
+execution 
+meant for testing the logic which will wait for all the processess 	to get completed 
+before executing the next scope
+runs flow through this section	 
+validation
+assert and verify comes here to validate and verify the flow
+
+allows you to set payload attributes and variables
+normally defined at the beginning of the m unit test to define the first message to the 
+set
+ you can define many properties
+ what is pluck function and map function and mapObject?
+ pluck function iterates over an object returns array of keys values and indices. - key value index
+ map function iterates over an Array returns array - index, value
+ mapObject iterates over an Object returns Object - key value index
+ What is distinctBy?
+ Iterates over an input and returns unique elements in it.
+ What is joinBy function in Dataweave?
+ merges an array into a single string value and uses the provided string as a separator between
+ each item in the list.
+ 
+ what is domain project?
+ domain project is common mule project where we can keep all common mule resource 	which can be 
+ used by multiple mule project which can be deployed in same runtime.
+ 
+ we cant use domain project for cloud hub deployment model	since in cloud hub we deploy more than one
+ project within same runtime that is worker.
+ 
+ so it can be used only used in Onpremise deployment model.
+ 
+ 
+why skipNullOn is used?
+to skip all the null values from the respose
+
+what is reduce function in dw?
+Applies a reduction expression to the elements in an array.
+
+
+
+API LIFE CYCLE?
+--> create RAML - RESTFUL API MODELLING LANGUAGE  - we provide resource, input, output, datatype
+-> 	Publish RAML to exchange
+-> Review RAML and getting the feedback
+-> if positive - build stage else go to design stage ie., RAML 
+-> In build stage we do the API development.
+-> After development of API we do the testing stage - MUNIT testing
+->  we will secure API's applying policy like client id enforcement, ratelimiting etc
+-> After deploying in cloudHub -> 	we should moniter application in cloudHub 
+--> troubleshooting - bugs and then managing the API's
+
+
+Available timezones for datatime converstion?
+java!java::util::TimeZone::getAvailableIDs()
+
+CICD or how do deploy
+code - write scripts regarding  the jenkins file - it will take that code from the repo
+build the code - after build it deploy on server.
+
+once code is checkin it will deployed on server or if we need to deploy in UAT OR QA after code checkin 
+we need approval and after approval we will deploy into the server.
+
+devops teams writes pipeline scripts and we will deploy the code in jenkins by using the jenkins file.
+
+what are the policies that you ave worked on?
+
+Ratelimiting(throttling) - rate limiting is used to control the number of api call 
+we can call the external system and the external system has some limit if the more than 
+limited req will come then we will get out of memory as error message.
+Spike control (throttling)- It is similar to rate limiting but we define the size of queue what ever the size
+of queue if the size of queue is completed we will take another queue.
+
+basic auth - 
+client Id enforcement - 
+JWT token - 
+Oauth - 
+HTTP Caching - 
+
+
+how to call subflow file using dataweave
+file - readURL
+flow - lookUp
+
+
+how to call configure properties in dw
+p('propertyname')
+
+when we use VM connector flow, where do we use
+to use VM queue provided from the mulesoft.
+
+Rate limiting is the way where we limit the number of request from the user side 
+429 limit exceeded.
+
+throtlling
+maximum number of reqests that can be processed with in a given time frame the excess request can be 	
+can be managed, cancelled or processed in some other way
+we use mule cache component first time we call from the external system then we will get the
+response from cache.
