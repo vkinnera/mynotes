@@ -172,7 +172,12 @@ intro?
 tell me about project?
 RAML - traits, datatypes?
 What are policies are used in your project - clientId enforcement, basic authentication, Oath policy.?
+
 How can we define multiple queryParams in URL?
+ANS: To send multiple query parameters we use the "&" ampercent symbol. 
+example: http://localhost:8080/covid/v1/cases?place=texas&zip=839102
+to access the particular queryParams we use attributes.queryParams.zip in code
+
 What kind deployment models are there in mulesoft?
 Why we use API LED Architecture?
 More about designing RAML like syntax based questions that are used in traits and datatypes?
