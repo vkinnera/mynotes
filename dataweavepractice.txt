@@ -2833,6 +2833,94 @@ var reversePayload = (reverse(payload.Reverse))
 //((reversePayload) splitBy  " ")[-1 to 0] joinBy  " "
 (payload.Reverse splitBy  " ") map ((item, index) -> if(typeOf(item)== Number) Number[-1 to 0] as String else if(typeOf(item)== String) item[-1 to 0]  else item) joinBy " "
 
+Input:
+[
+  {
+    "num": 1,
+    "name": "Archer",
+    "jobs": [
+      {
+        "num": 1,
+        "type": "developer"
+      },
+      {
+        "num": 2,
+        "type": "investor"
+      },
+      {
+        "num": 3,
+        "type": "educator"
+      }
+    ]
+  },
+  {
+    "num": 2,
+    "name": "Cyril",
+    "jobs": [
+      {
+        "num": 1,
+        "type": "developer"
+      },
+      {
+        "num": 2,
+        "type": "entrepreneur"
+      },
+      {
+        "num": 3,
+        "type": "lion tamer"
+      }
+    ]
+  }
+]
+Output:
+[
+  {
+    "num": 1,
+    "name": "Archer",
+    "jobs": [
+      {
+        "num": 1,
+        "type": "developer"
+      },
+      {
+        "num": 2,
+        "type": "investor"
+      },
+      {
+        "num": 3,
+        "type": "educator"
+      }
+    ]
+  },
+  {
+    "num": 2,
+    "name": "Cyril",
+    "jobs": [
+      {
+        "num": 1,
+        "type": "developer"
+      },
+      {
+        "num": 2,
+        "type": "entrepreneur"
+      },
+      {
+        "num": 3,
+        "type": "lion tamer"
+      }
+    ]
+  }
+]
+Dataweave:
+%dw 2.0
+import * from dw::core::Strings
+output application/json 
+---
+payload map ((item, index) -> {
+"num": index+1,
+"name": item.name,
+"jobs": item.jobs map ((item, index) -> {"num": index+1, "type":item."type"})
+})
 
 
  
