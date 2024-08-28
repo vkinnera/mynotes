@@ -2744,6 +2744,79 @@ output application/xml
     }
 }
 
+Input:
+[
+    {
+        "key1": "address",
+        "value": "address-1"
+    },
+    {
+        "key1": "address",
+        "value": "address-2"
+    },
+    {
+        "key1": "Postal",
+        "value": "208081"
+    }
+]
+Output:
+[
+  {
+    "address": "address-1,address-2"
+  },
+  {
+    "Postal": "208081"
+  }
+]
+Dataweave:
+%dw 2.0
+output application/json
+var groupedData = payload groupBy ((item, index) -> item.key1)
+---
+groupedData pluck ((value, key, index) -> (key): (value.value joinBy  ","))
+
+input:
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="Welcome">Welcome! To my home page</string>
+  <string name="Web_name">General View</string>
+  <string-array name="EuropeCountry_array">
+    <item>Berlin</item>
+    <item>Vienna</item>
+    <item>Stockholm</item>
+    <item>Richard Nixon</item>
+    <item>Prague</item>
+    <item>Rome</item>
+    <item>Budapest</item>
+    <item>Amsterdam</item>
+    <item>London</item>
+    <item>Norway</item>
+    <item>Denmark</item>
+  </string-array>
+</resources>
+output:
+{
+  "countries": [
+    "Berlin",
+    "Vienna",
+    "Stockholm",
+    "Richard Nixon",
+    "Prague",
+    "Rome",
+    "Budapest",
+    "Amsterdam",
+    "London",
+    "Norway",
+    "Denmark"
+  ]
+}
+dataweave:
+%dw 2.0
+output application/json
+---
+{
+  "countries": (payload.resources."string-array").*item
+}
 
 
 
