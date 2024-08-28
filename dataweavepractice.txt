@@ -2818,7 +2818,20 @@ output application/json
   "countries": (payload.resources."string-array").*item
 }
 
-
+Input:
+{
+  "Reverse": "Dataweave 2.0 is Cool"
+}
+Output:
+"evaewataD 0.2 si looC"
+dataweave:
+%dw 2.0
+import * from dw::core::Strings
+output application/json
+var reversePayload = (reverse(payload.Reverse)) 
+---
+//((reversePayload) splitBy  " ")[-1 to 0] joinBy  " "
+(payload.Reverse splitBy  " ") map ((item, index) -> if(typeOf(item)== Number) Number[-1 to 0] as String else if(typeOf(item)== String) item[-1 to 0]  else item) joinBy " "
 
 
 
