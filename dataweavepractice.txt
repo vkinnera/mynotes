@@ -3003,5 +3003,45 @@ payload map ((item,index) -> {
 "BossName": (payload filter ((item1, index) -> item1.ID == item.bossID))
 })
 
+Input:
+[
+ {
+ "name" : "ab",
+ "age" : 12
+ },
+ {
+ "name" : "ab",
+ "age" : 13
+ },
+ {
+ "name" : "ab",
+ "age" : 14
+ }
+]
+Output:
+[
+  {
+    "name": "ab",
+    "age": 12
+  },
+  {
+    "name": "ab",
+    "age": 15
+  },
+  {
+    "name": "ab",
+    "age": 14
+  }
+]
+Dataweave:
+%dw 2.0
+output application/json
+---
+payload map ((item, index) -> {
+ "name" : "ab",
+ "age" : if(item.age == 13) 15 else item.age
+ })
+
+
 
  
