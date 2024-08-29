@@ -3042,6 +3042,39 @@ payload map ((item, index) -> {
  "age" : if(item.age == 13) 15 else item.age
  })
 
-
+Replace the age from 13 to 15 in below input
+Input:[
+ {
+ "name" : "ab",
+ "age" : 12
+ },
+ {
+ "name" : "ab",
+ "age" : 13
+ },
+ {
+ "name" : "ab",
+ "age" : 14
+ }
+]
+Output:[
+  {
+    "name": "ab",
+    "age": 14
+  },
+  {
+    "name": "ab",
+    "age": 13
+  },
+  {
+    "name": "ab",
+    "age": 12
+  }
+]
+Dataweave:
+%dw 2.0
+output application/json
+---
+payload[-1 to 0]
 
  
