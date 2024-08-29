@@ -3077,4 +3077,32 @@ output application/json
 ---
 payload[-1 to 0]
 
+Show the details of only the maximum marks scored student in object
+input:
+[
+{
+"Name": "Shubham",
+"Marks": "95"
+},
+{
+"Name": "Raghav",
+"Marks": "75"
+},
+{
+"Name": "Shurab",
+"Marks": "55"
+}
+]
+output:
+{
+"Name": "Shubham",
+"Marks": "95"
+}
+dataweave:
+%dw 2.0
+output application/json
+---
+payload maxBy ((item) -> item.Marks)
+
+
  
