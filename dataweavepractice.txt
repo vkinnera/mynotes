@@ -2922,5 +2922,86 @@ payload map ((item, index) -> {
 "jobs": item.jobs map ((item, index) -> {"num": index+1, "type":item."type"})
 })
 
+Input:
+[{
+"ID": "A123",
+"name": "Carlsen",
+"department" : "HR",
+"bossID": "C123"
+},
+{
+"ID": "A345",
+"department" : "Sales",
+"name": "Gada",
+"bossID": "B987"
+},
+{
+"ID": "C123",
+"department" : "Sales",
+"name": "John",
+"bossID": "B984"
+},
+{
+"ID": "B987",
+"department" : "HR",
+"name": "James",
+"bossID":"C123"
+}]
+Output:
+[
+  {
+    "EmpName": "Carlsen",
+    "Department": "HR",
+    "BossName": [
+      {
+        "ID": "C123",
+        "department": "Sales",
+        "name": "John",
+        "bossID": "B984"
+      }
+    ]
+  },
+  {
+    "EmpName": "Gada",
+    "Department": "Sales",
+    "BossName": [
+      {
+        "ID": "B987",
+        "department": "HR",
+        "name": "James",
+        "bossID": "C123"
+      }
+    ]
+  },
+  {
+    "EmpName": "John",
+    "Department": "Sales",
+    "BossName": [
+      
+    ]
+  },
+  {
+    "EmpName": "James",
+    "Department": "HR",
+    "BossName": [
+      {
+        "ID": "C123",
+        "department": "Sales",
+        "name": "John",
+        "bossID": "B984"
+      }
+    ]
+  }
+]
+Dataweave:
+%dw 2.0
+output application/json skipNullOn = "everywhere"
+---
+payload map ((item,index) -> {
+"EmpName": item.name,
+"Department": item.department,
+"BossName": (payload filter ((item1, index) -> item1.ID == item.bossID))
+})
+
 
  
