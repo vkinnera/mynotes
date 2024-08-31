@@ -52,6 +52,7 @@ Annotation Type
 Security Scheme
 
 how do we do validation in raml? 
+Header and queryParam validation is done by editing the APIKIT router configuration.
 
 how do we hand over raml to client after designing. 
 
