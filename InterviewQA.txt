@@ -68,6 +68,7 @@ This is used to create new resources. It is not idempotent, making two identical
 3. HTTP PATCH 
 The PATCH method applies partial modifications to a resource. 
 
+https://www.geeksforgeeks.org/what-is-the-difference-between-put-post-and-patch-in-restful-api/
 
 need of put & post. 
 
