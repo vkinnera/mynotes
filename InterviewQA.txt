@@ -72,7 +72,19 @@ https://www.geeksforgeeks.org/what-is-the-difference-between-put-post-and-patch-
 
 need of put & post. 
 
-foreach vs parallel foreach   
+foreach vs parallel foreach  
+
+for each process is single threaded and it process the records one by one and parallel for 
+each is multi threaded and it process multiple records at the same time in parallel way
+parallel ForEach - o/p- the output of this scope is the collection of the results of each route and the aggregated results will be in the same order they were, prior to the split. 
+for each - o/p same orginal payload it doesnt modify the payload 
+foreach
+payload after and before for each - same
+Variable after and before for each - changes(what ever we will configure in last loop )
+parallel for each
+payload after and before parallel for each - changes(collection of all payload in parallel for each)
+variable after and before for each - same
+the variable created inside the parallel for each will not exists after parallel for each
 
 scatter-gather. 
 
