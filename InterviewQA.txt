@@ -55,6 +55,8 @@ how do we do validation in raml?
 Header and queryParam validation is done by editing the APIKIT router configuration after importing RAML in anypoint studio.
 
 how do we hand over raml to client after designing. 
+API Specification Portal
+MuleSoft Anypoint Exchange: If using MuleSoft, you can publish the RAML API to Anypoint Exchange, where clients can access the API specification, documentation, and other resources.
 
 post vs put vs  patch. 
 
