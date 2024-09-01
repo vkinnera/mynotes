@@ -97,6 +97,10 @@ Munits.
 deployment model (through jenkinspipeline).   
 
 vcore vs worker. 
+Workers give the computational skills to the application. 
+vcore is memory size that is assigned to a worker(mule instance) like we assign 8gb or 16gb ram to a system.
+Increasing the number of vcores from lower to higher is vertical scaling.
+Increasing the workers is horizantal scaling like if one worker handles 1000 requests per minute then 2 workers handles 2000 requests per min.
 
 error handling. 
 
