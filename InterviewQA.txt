@@ -88,6 +88,8 @@ the variable created inside the parallel for each will not exists after parallel
 
 scatter-gather. 
 
+https://docs.mulesoft.com/mule-runtime/latest/scatter-gather-concept
+
 spike control vs rate limiting policy. 
 
 Munits. 
