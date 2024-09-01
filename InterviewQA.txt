@@ -59,6 +59,15 @@ API Specification Portal
 MuleSoft Anypoint Exchange: If using MuleSoft, you can publish the RAML API to Anypoint Exchange, where clients can access the API specification, documentation, and other resources.
 
 post vs put vs  patch. 
+1. HTTP PUT 
+This updates or Creates a resource. It is idempotent. Multiple identical requests will update the same resource. 
+ 
+2. HTTP POST 
+This is used to create new resources. It is not idempotent, making two identical POST will duplicate the resource creation. 
+
+3. HTTP PATCH 
+The PATCH method applies partial modifications to a resource. 
+
 
 need of put & post. 
 
