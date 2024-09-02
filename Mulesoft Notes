@@ -780,5 +780,11 @@ when we deploy our api to cloud hub we need to configure the auto discovery.
 request -> gateway -> Request to API manager -> API managers validate the poilcy -> respond to gateway -> gateway is success ->
 it call to runtime manager.
 
+how can we call process API from experience API?
+HTTP requestor
+
+API proxies?
+when ever we want to put non functional requirement outside of the functional requirement we need api proxies.
+
 
 
