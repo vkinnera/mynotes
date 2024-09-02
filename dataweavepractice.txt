@@ -3104,5 +3104,24 @@ output application/json
 ---
 payload maxBy ((item) -> item.Marks)
 
+what are the fragements we have in RAML? under which fragment we can put client id and client secret?
+RAML -> CREATE FRAGMENTS -> CREATE TRAITS -> HEADERS -> CLIENT ID AND CLIENT SECRET
+
+SCENARIO:
+We dont have error handling in neither global error handling or flow level how would you send error responses as 503etc to the client?
+We can configure the status code in response section.
+
+what is criteria for adding resource?
+dont add more than 20 resouces to each RAML and resource name should be noun and plural.
+
+challenges 	faced while using batch proceesing?
+handle failed records and get the summary report.
+for failed records we will add the one more batch step and handle the failed record there.
+
+How API manager will know about deployed application in case you have to apply policy(API Auto discovery)?
+when we deploy our api to cloud hub we need to configure the auto discovery.
+request -> gateway -> Request to API manager -> API managers validate the poilcy -> respond to gateway -> gateway is success ->
+it call to runtime manager.
+
 
  
