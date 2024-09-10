@@ -786,11 +786,30 @@ HTTP requestor
 API proxies?
 when ever we want to put non functional requirement outside of the functional requirement we need api proxies.
 
-what is filte in dw?
+what is filter in dw?
 filter-> to filter array of Objects
 
 what is filterObject in dataweave?
 filter a single Object then use filterObject
+
+what is cloud Hub worker?
+A mule runtime instance deployed in cloud hub.(which runs in an EC2 instance)
+
+what is Object store V2 service?
+cloudhub hosted object store that is separate from the worker so that it survies restart.
+
+
+what is DLB(Dedicated Load Balancer)
+Also called as vanity domains. cloud hub dedicated load balancers are optional component of anypoint platform that
+enables to routing external http and https traffic to multilple mule applications deployed to cloud bub in a virtual private 
+cloud(VPC)
+
+can cloudhub supports domain?can runtime fabric supports domain?
+no
+
+If I wanted cloudhub integrated with splunk/elk
+custom log appender for the app(log 4j config)
+
 
 
 
