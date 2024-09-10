@@ -885,8 +885,9 @@ scatter gather- an aggregated response of the routes
   
 
 watermarking-- to avoid duplicate data processing   
-
-  
+watermerking stores the current / last picked up record id. If the mule application is shutdown it will
+store the last picked up recordid in the java Object store and the data will continue to exist in the
+file. the watermarking functionality is valuable and enables developers to have increased transparacy.
 
 i have worked on a api called Post refund in which we have used api led connectivity structure 
 in these we have three layers 
