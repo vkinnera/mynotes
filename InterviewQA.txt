@@ -227,8 +227,12 @@ INFOSYS INTERVIEW:
 self Intro 
 Components in raml? 
 api life cycle 
-whats are the ways to import raml to studio and explain them 
+whats are the ways to import raml to the studio and explain them 
+
 apikit console --scenario based 
+In API implementation mule provide APIKit router for routing messages, validating payloads, headers, queryParams and URI params against the RAML.
+
+
 api exchange, cloudhub --scenario based 
 how scaling can be done 
 about logs --scenario based 
