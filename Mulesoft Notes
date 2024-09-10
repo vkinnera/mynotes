@@ -786,5 +786,12 @@ HTTP requestor
 API proxies?
 when ever we want to put non functional requirement outside of the functional requirement we need api proxies.
 
+what is filte in dw?
+filter-> to filter array of Objects
+
+what is filterObject in dataweave?
+filter a single Object then use filterObject
+
+
 
 
