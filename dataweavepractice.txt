@@ -1097,6 +1097,9 @@ client ID enforcement
 JWT token
 Oath
 
+what is filterObject in dataweave?
+filter a single Object then use filterObject
+usecase:
 dataweave to remove empty values in an Object.
 input:
 {
