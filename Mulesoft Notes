@@ -810,6 +810,9 @@ no
 If I wanted cloudhub integrated with splunk/elk
 custom log appender for the app(log 4j config)
 
+what is cloudHub SLB?
+Included for free for any cloudhub app deployment uses a mulesoft certificate and cannot support "vanity domains"
+
 
 
 
