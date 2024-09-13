@@ -1,0 +1,895 @@
+
+
+Tell me about yourself, experience and roles and Responsibilities? Which version of MuleSoft you worked?
+what is the difference between web services and restful services?
+Web service is generic term which used to refer the service/API which available in the web. Web service can be http web service or
+SOAP web service or REST web service.
+RESTful services – an architectural style which used to expose the service in http/https(s) using REST/JSON or REST/xml format
+
+Difference between Http requestor and router?
+Http Requestor used to invoke external http web service.
+Router – This used to route the message based on conditional routing. Example: Choice
+
+How you start the Flow when you get the requirement? what are factors you will consider?
+When we start the new flow, we will consider the following.
+What’s the source system?
+What’s the target system?
+What’s the mapping when we need to while connecting the system?
+What data format we need to change
+What’s the file size and do we need to batch Serial processing / concurrent processing required How do we need to handle error?
+
+what is Active MQ? why we use Active MQ?
+Active MQ acts a broker to achieve publish/message pattern using JMS
+It act as a JMS layer for messaging which we can publish and subscribe the messages from the topic or queues.
+
+
+How you will use Data base functions in your project?
+We can add database module to configure the database connection and use database related operations like
+select,insert,update, etc.,
+
+what are the methods developed in your project?
+Get, Post , Put
+
+what is Orchestration Layer in your project?
+Orchestration layer is used to compose multiple components. Its used to combine the database from different system such as CRM, SAP and etc.,
+
+Explain about the Data wave, have you used Java coding in Data wave?
+Dataweave is MuleSoft expression language for accessing and transforming data that travels through a Mule app.
+This helps to modify and process the data.
+
+How you will create project using RAML?
+Create a project and select API file (REST) specification while creating the project and it creates the project with required REST router kit.
+
+what is REST API? why we use REST API’s?
+REST is architectural style used to expose http method such as get/post/delete/put etc., its lightweight and we can retrieve the response faster.
+
+Can you explain some the connectors used in your project?
+I have used AWS S3 connector to connect S3 storage to receive the file.
+I have used database connector to connect the data base.
+I have used http request connector to invoke REST based web service I have used SOAP connector to consume SOAP based WS.
+
+
+How you apply the policies in your project?
+Create API in API Manager in any point platform and take a note of API discovery id. In the API, add the policy which are required
+Create project using API in Any point studio.
+Add auto discovery configuration and provide the details of API discovery id.
+Execute the project; Now API will become active in any point platform. whenever request comes to the Mule app and it apply
+the policy and then it will allow the request to proceed further based on policy we applied.
+
+How you will deploy the API's?
+From any point studio->Any point platform->Deploy into Cloudhub
+
+How DB is working in background in your project?
+We have added database module and invoking the required select service to retrieve the records from table and also we
+have exposed those information in get service in http listener.
+
+How you validate the RAML and Explain about the RAML Flow?
+When we actually create project using RAML file in any point studio, it also creates the API console and REST router kit. Whenever request received to the flow, it goes to the api console and validate the configuration what we have specified in the RAML specification.
+
+Have you used Java in your project? where you have used
+For Existing methods which already developed.
+
+How you use the Process API in your project?
+Process APIs are invoked from Experience layer. This generally receives the common data model / canonical document and in turn
+invokes system api.
+
+Explain about the POSTMAN?
+Post man is http rest client which acts as a testing tool to run the Mule app which is running with method http/https.
+
+
+
+Have you ever built API'S alone?
+Yes. I have built the API using design certner-> RAML specification.
+
+What is Scatter-Gather?
+Scatter gather, receive the requests and it sends the same data /payload to all flows which are available in the scatter scope and its works in parallel.
+
+Difference Between For-each and batch processing
+For each to process each messages in the array/collection in the sequential order
+Batch to process each messages in the array/collection in the concurrent/parrallel order
+
+How to transform csv file into json using data weave?
+In the dataweave expression, provide the syntax as application/JSON, it will automatically convert the csv to JSON
+
+API LED connectivity
+This term used to expose everything as API. Connect all application as a API
+
+What are the scopes
+For Each Flow Subflow Try
+What is caching and why do we use it?
+
+
+
+
+gather
+
+Caching used to cache the data which we can be reused later. Its used to take the reusable configuration/data from the memory instead of file system.
+
+How to handle errors?
+We can handle the error by adding error handling flow in the same mule app or global mule app configuration.
+
+
+what kind of operations you are going to perform by using database connector?
+Select
+Insert, update, delete Store procedure call
+
+what is exact functionality of the database connector in the MuleSoft?
+It is to connect to different database so that we can connect and retrieve / process the records to database.
+
+What is the meaning of auto discovery?
+Autodiscovery is a feature used to link the Mule app with the API available in the API manager in the anypoint platform using auto discovery id of API.
+
+what is the use of Rate Limiting policy,
+It limits the number of requests.
+
+Fragments:
+API fragmentation used to specific/create the reusable blocks, so that same fragments can be referred from the multiple flow.
+
+RAML
+What is traits in RAML?
+Fragments: Instead of including all code in one RAML file, you can modularize it and compose it of reusable fragments (examples).
+Traits: Traits is like function and is used to define common attributes for HTTP method (GET, PUT, POST, PATCH, DELETE, etc) such as whether or not they are filterable, searchable, or pageable.
+Traits can be called by resources using the "is" keyword. is: [responseMessage]
+more details available at https://dzone.com/articles/understanding-resourcetypes-and-traits-with-raml
+
+
+
+
+
+
+If we wanted to process only one message at a time in mule flow how can we achieve that?
+we can make a flow to process in single thread, there is an option to define the Max Concurrency
+the same as 1 to	process only one message at a time
+
+How can you process message asynchronously in Mule Soft?
+Async scope
+
+What are various types of error handling in Mule 4?
+
+on-error-continue and on-error-propagate.
+
+Why we use Batch Aggregator scope
+
+
+
+configure
+
+
+Batch Aggregator scope is used to accumulate a subset of records from a batch step and process them to external source or service
+for example rather than processing single record to target system you can use batch aggregate to process all the records at once
+
+How we will access the properly value in dataweave
+
+p(‘<propertyname>') – to access the property from configuration
+p(‘secure::<propertyname>') – to access the property from configuration
+
+How do we store the encrypted value in the configuration file
+key=![encrypted content goes here ]
+
+How the keys are fetched from the configuration file.
+${key}
+${secure::key}	For more videos->https://www.youtube.com/c/TechLightning
+
+What Is Payload In Mule? Answer:
+The content of a message, also known as the payload
+
+
+
+What are the information available in Mule Event
+Mule Message (Payload, Attributes), Variables, Error
+
+What is Anypoint Exchange in MuleSoft?
+
+Anypoint Exchange provides the benefit of being able to discover, share, and incorporate assets and resources into your
+applications.
+
+What are the different types of APIs in API led architecture
+
+Experience API Process API System API
+
+
+For more videos->https://www.youtube.com/c/TechLightning
+
+
+
+What are deployment options available in MuleSoft?
+•Cloud hub
+•On-premise
+•R untime F abric(RTF )
+•Anypoint PCE(Anypoint Private Cloud E dition)
+•Anypoint PCF(Anypoint Platform for Pivotal Cloud Foundry)
+
+What is Cloudhub?
+Cloudhub is an (IPass) Integrated platform as a service which is multitenant, secure, highly available service where we can deploy our integration applic on cloud also integrate on-premise application with cloud services
+
+How many ways you can deploy application on Cloudhub?
+Anypoint Studio Runtime Manager Anypoint CLI Cloudhub API
+
+What is persistent queue?
+Persistent queues also guarantee delivery of your messages; even if one or more workers or datacenters go down, persistent
+queues facilitate disaster recovery and provide resilience to hardware or application failures.
+
+What is RTF (Run time Fabric)?
+Anypoint Runtime Fabric is a container service that automates the deployment and orchestration of your Mule applications Runtime Fabric runs on customer-managed infrastructure on AWS, Azure, virtual machines (VMs).
+
+What is API Portal in MuleSoft?
+API Portal allows providers to expose and publicise their APIs, educate developers communities about them, provision user
+access generate client keys and more	For more videos->https://www.youtube.com/c/TechLightning
+
+
+
+Explain ESB Integration core principles?
+
+Transformation Mediation
+
+What is scheduler Endpoint?
+Scheduler Endpoint is a MuleSoft component or middleware are working on time-based conditions. It allows the user to
+trigger whenever this condition is met.
+
+What is Choice Router?
+
+Choice Router dynamically routes messages using a flow. It is based on a set of DataWeave expressions to evaluate the message content.
+
+Explain VM transport in MuleSoft
+The VM (Virtual Machine) transport is a special type of transport that can be used to send a message via memory.
+
+What is API?
+APIs provides product or service to communicate with other products and services without having to know how they're
+implemented.
+
+Private Flow: a flow that does not have source. This means a private flow cannot start of its own on receiving the inbound message as it does not have an inbound connector, A private flow can only be called using flow-ref same as sub-flow.
+
+Transform Message
+A transformer takes care of translating the content of a message from one form to another.
+
+
+
+What are the advantages of REST
+
+Fast
+Different data format like XML, JSON
+Language and platform independent.
+
+MuleSoft Anypoint Studio- Initial setup error.
+Java Path error Tooling instance error.
+
+Explain few Http Status Codes:
+200 - OK
+201- CREATED
+202 - Accepted 400 – Bad request 401-Unauthorized 404 – Not found
+429 – Too many requests
+
+
+What is ObjectStore v2
+Cloud Hub applications store data and states across batch processes, Mule components and applications, from within an application or by using the Object Store REST API.
+
+In the Mule project where the package dependencies details are stored.
+POM. XML file
+
+How to access query Parameters and other attributes?
+Attributes.queryParams.number1
+
+What is API first Approach
+Design the API using specification (ex: RAML) and use that specification to Implement the flow.
+
+How to see the logs on cloud hub ?
+Anypoint platform->Runtime Manager-> choose your application -> click Logs
+
+What is Munit?
+MUnit is a Mule application testing framework that allows you to easily build automated tests for your integrations and
+APIs.
+
+
+
+
+What is Anypoint Design Center ?
+is a development environment that consists of two tools:
+API Designer
+Flow Designer
+
+
+
+For more videos->https://www.youtube.com/c/TechLightning
+
+
+
+What is VPC
+The Anypoint Virtual Private Cloud (VPC) offering allows you to create a virtual, private, and isolated network segment in
+the cloud to host your CloudHub workers. Customer can choose which region they need their VPC.
+
+What is Any Point MQ
+Anypoint MQ is a multi-tenant, cloud messaging service that enables customers to perform advanced asynchronous messaging scenarios between their applications. Anypoint MQ is fully integrated with Anypoint Platform, offering role- based access control, client management, and connectors.
+Supports – FIFO (First in First out), Exchange (topics)
+We can use Message browser UI to view the messages.
+
+How will we identify ESB is needed in a project?
+•Implementation of ESB is not suitable for all the projects. We should analyze is really ESB is required here or not. You need to analyze by taking below points into consideration:
+•In the project, require 2 or more applications and services to be integrated and there must be a need to
+communicate between the applications.
+•If there is plan of interacting with more applications and Services in the future then we can go with Mule ESB because it is highly scalable.
+
+How do you draw architecture diagram in your enterprise and what are the diagram which you draw
+•Tools: Confluence – Gliffy diagram , Archimate, Draw.io, SmartDraw
+•Diagrams: Sequence, Flow, Activity, Deployment
+
+What is layered Architecture? (Software Architecture Pattern)
+It is the organization of the project structure into four main categories: presentation, application, domain, and infrastructure. Each of the layers contains objects related to the particular concern it represents.
+
+Mule soft use 3 layered architecture – Experience, Process , System API
+Java –MVC Pattern	For more videos->https://www.youtube.com/c/TechLightning
+
+
+
+What is Application Networks
+Set of Application is talking to Set of Applications called Application Networks
+
+What is Business Groups
+Business groups are self-contained resource groups that contain Anypoint Platform resources such as APIs and applications. Business groups provide a way to separate and control access to Anypoint Platform resources, as users have access only to the business groups in which they have a role.
+
+What is Control plane and What is run time plane.
+
+Any Point Platform – Control Plane Mule Runtime – Run Plane
+
+What is connector?
+Connector is a module which talks to external system. If its not available in the module, then it needs to be download it from Exchange. Its better to download it from Exchange, so that we can get the latest version.
+
+Where do you add documentation in Mule application?
+Mule Flow properties - > Notes section
+
+What is DataSense ?
+Data Sense is a feature of Anypoint Studio that uses Mule event metadata to help you design applications. Rather than forcing you to manually discover this metadata, Anypoint Studio automatically acquires it so that you can map or use this data in your application.
+
+How will you get the current date/time in Data weave (DW)
+now()
+Sample result : "2020-09-17T04:39:45.129Z"	For more videos->https://www.youtube.com/c/TechLightning
+
+
+What is Thru MFT
+Thru MFT is third party Managed File transfer framework certified by Mule Soft. We can use Thru MFT connector to send/receive the files Thru MFT for processing.
+
+What are the things called Transactions
+Object Store – No transaction
+Database connector – Transactions -- Advanced Tab Transaction action JMS Connector – Transactions
+If connector has tranactions then it supports transaction management.
+Bitronix Transaction Manager allows Mule to automatically recover interrupted transactions on restart.
+
+Why Socket module gets added by Default while creating new project.
+It needs by HTTP
+
+What is Any Point CLI?
+Anypoint Platform provides a scripting and command-line tool for both Anypoint Platform and Anypoint Platform Private Cloud Edition (Anypoint Platform PCE).
+
+What is target Variables in Mule4?
+Target Variable is used to store the contents of service call. In mule3, this is Enricher
+
+
+
+Mule Domain project
+When you deploy Mule on premises, you can define global configurations such as default error handlers, shared properties, scheduler pools, and connector configurations to be shared among all applications deployed under the same domain. To do so, create a Mule domain and then reference it from each application.
+
+AnyPoint Visualizer
+Displays views of different aspects of an application network graph. You can use the graph to explore your
+application network. To see how the transaction going inside your application.
+
+AnyPoint API community Manager
+Enriched design with API for developer portal.
+
+CloudHub Workers
+Applications on CloudHub are run by one or more instances of Mule, called workers. Each worker is a dedicated instance of Mule that runs your integration application. We can specify worker size (0.1vcore = 500 MB Heap memory, 8 GB storage)
+
+What is Edge Policy
+To protect all of the mule apps proxies – Denial of Service (DOS) - used in Runtime fabric deployment Architecture.
+
+What is Edge Tokenization Policy
+This policy calls the service to tokenize the data before giving to actual mule application. Ex: masking credit cards, social security numbers
+
+Mule 4 mule-artifact.json file
+-	Information about Your Apps like required mule version, secure properties if any.
+
+
+
+
+Some important Links https://docs.mulesoft.com/ -- Documentation http://help.mulesoft.com/	 Forum https://help.mulesoft.com/s/ideas - To post ideas
+https://meetups.mulesoft.com/ - To know upcoming MuleSoft meetups
+
+Thank you for watching !
+Youtube channel for MuleSoft videos:
+https://www.youtube.com/c/TechLightning
+
+Subscribe the channel and Click bell icon for notification
+
+
+How to invoke mule flow - asynchronous
+1)Publish-subscribe pattern using VM/JMS/Anypoint MQ
+2)Async scope-Async can be used to do the processing in parallel with the main flow, it can be used to process the time consuming operations that does not expect a response back
+
+How will you combine 2 arrays into single array in MuleSoft?
+You can use flatten dataweave function to combine two arrays in to single array
+
+What is the difference – mule3 vs mule4? This question might come when you worked in both version! Mule event structure got changed
+Variables (flow, session, record var) changed to 1 variable. Mule3 – we use enricher, and Mule4 it is target variable
+
+How we store environment level properties?
+Global properties in Studio and we can override properties value in runtime manager in anypoint platform.
+
+How do you call store procedure in database from mule?
+Connector->Database->Stored procedure
+
+How do we store data in variable in mule4?
+We can use ‘set variable’ to store the data
+
+We are using post method to send the data to mule flow from restclient/postman, but we are not sending any data in the payload while sending the request ? What will happen to your flow?
+Mule flow will receive your request with empty payload and also with other http related attributes/headers
+
+Mule flow is defined to accept only post method. But source is sending the request to your endpoint using get method.
+Method not allowed for endpoint: <endpoint name> with http status 405 Method Not allowed.
+
+
+How to do string to integer conversion and send it back to source as integer ?
+%dw 2.0
+output application/json
+---
+{
+"inta" : attributes.queryParams.inta ,
+"intb" : attributes.queryParams.intb ,
+"result" : ((attributes.queryParams.inta as Number) + (attributes.queryParams.intb as Number) )
+}
+
+Input: localhost:8081/demo?inta=22&intb=11 Output:
+{
+"inta": "22",
+"intb": "11",
+"result": 33
+}
+
+
+
+What is the use of reduce, map, spilitBy, pluck in Mule4 Dataweave? What is the use of GroupBy, OrderBy, distinctBy in Mule4 Dataweave?
+
+
+What is the advantage of MuleSoft
+•Very lightweight but highly scalable.
+•Ability to integrate and connect over the vast range of application network.
+•Reusability of Components
+
+How to invoke the Custom Java Class from inside a dataweave?
+%dw 2.0
+Import java!com.mycompany::classname output application/json
+---
+{
+a:  classname::methodName("myString")
+}
+
+How to call Flow from inside a dataweave?
+lookup(“flowname”, payload)
+What kind of development guideline/best practices happen In your mule project?
+•Do not save the Payload in to the flow Variable as it is more memory consuming element.
+•Keep the server details, port, server credentials in the configuration file instead of hard coding.
+•All the password needs to be encrypted (use secure property)
+•Create reusable assets across teams and projects.
+•Breakdown large application flows into smaller flows
+•Naming convention to be followed for application name, components.
+•http response code should be mapped property as per http standards.
+•Recommended to use latest version of the connector.
+•There shouldn’t be any unused var/code inside mule project.
+•Reprocessing connection strategy should be defined properly.
+
+
+Mule Project/application Structure
+
+
+
+
+
+For more videos->https://www.youtube.com/c/TechLightning
+
+
+In which scenario, we will use SFTP connector vs File connector
+SFTP Connector:
+When we want mule application to receive data from one external/internal system/partners.
+
+File connector:
+Handles files (read,write,list,copy,move) and folders on a locally mounted file system
+
+When we should use batch processing
+Handling large quantities of incoming data into a different systems
+What are the different steps available in Batch job
+Process records On complete
+
+
+
+What are the different steps available in Batch Step
+Processor Aggregator
+
+
+
+
+
+Thank you for watching !
+Youtube channel for MuleSoft videos:
+https://www.youtube.com/c/TechLightning
+Subscribe the channel and Click bell icon for notification
+
+
+
+
+What kind of response we can expect from Async scope?
+There wont be any response coming back to main flow
+
+How we can secure mule application ?
+We can use/enforce runtime API policies like Basic Authentication, client-id, Secret, OAuth, Rate Limiting, Quota to secure
+mule application.
+
+What is custom policies in mule4?
+Custom policies are policies that anyone can develop and apply to their APIs, with the intention of extending existing functionality or defining new ones.
+
+What is full form of RAML?
+Restful API Modelling Language
+
+What is Custom business event?
+Mule applications collect business event information (such as transaction execution time, errors, success or failure results, and message payload information) about flows and message processors that handle your business transactions.
+More details available at video-> https://www.youtube.com/watch?v=e-Gj76m0sZg (Techlightning channel)
+
+What is raise error?
+We can use this component to throw an error.
+
+What is scatter gather. What will happen one of flow is failing in scatter gather in Mule4. How can we handle it.
+Scatter-Gather executes concurrently.
+All the failed and successful payload available at the end of the scatter gather. We can use the payload 0 1 and so on.
+
+
+
+
+What is reconnection strategy in mule?
+When an operation in a Mule application fails to connect to an external server, the default behavior is for the operation to fail immediately and return a connectivity error (FTP:CONNECTIVITY, HTTP:CONNECTIVITY, or DB:CONNECTIVITY)
+You can configure a reconnection strategy for an operation either by modifying the operation properties or by modifying the configuration of the global element for the operation. For example, you can configure a reconnection strategy in an HTTP Request configuration: None (Default behaviour, Standard (set the number of reconnection attempts and interval). For ever(Attempts to reconnect continually at a given interval))
+
+What is reduce operation in mule4?
+Reduce operation can be used to process an array and operate on each of its elements. It performs an aggregation
+operation on the elements of an array.
+This example returns the sum of the numeric values in the first input array. Ex:
+[2, 3] reduce ($ + $$)
+Ans:5
+
+[2, 3] reduce ($$ ++ $)
+Ans: 23
+
+What is the purpose of APIKit Router?
+In API implementation, Mule provides APIkit Router for routing messages, validating payloads, headers, query-params, and URI-params against the RAML.
+
+
+
+What is watermark in mule?
+Watermark stores the current/last picked up “record id.” If the Mule application is shut down, it will store the
+last picked up “record id” in the Java Object Store and the data will continue to exist in the file. This watermark functionality is valuable and enables developers to have increased transparency
+
+What is Auto Delete property in file connector? True, automatically deletes the file from the source. False, it will not delete the file from source.
+
+What is filter in Dataweave?
+Filter -> To filter over array of objects
+
+What is filterObject in Dataweave?
+Filter on single object, then use filterObject
+
+Common/Frequently Asked Interview Questions-MuleSoft
+
+Refresh your knowledge on the following topics.
+
+
+
+
+Any Point Platform/ Cloud hub
+On-Premise
+Any Point Studio
+General
+
+
+
+
+
+
+
+
+
+
+
+
+For more videos->https://www.youtube.com/c/TechLightning
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Any Point Platform/Cloud Hub
+
+Cloudhub worker
+A mule runtime instance deployed in Cloudhub (which runs in an EC2 instance)
+
+Object store v2 service
+Cloudhub hosted object store that is separate from the workers so that it survives restarts.
+
+What is cloudhub DLB (Dedicated Load Balancer)
+Also called as vanity domains. CloudHub dedicated load balancers (DLBs) are an optional component of Anypoint Platform that enable you to route external HTTP and HTTPS traffic to multiple Mule applications deployed to CloudHub workers in a Virtual Private Cloud (VPC).
+
+Can cloudhub support domains? Can Runtime Fabric support domains? No
+
+If I wanted cloudhub to integrate with splunk/elk? Custom log appender for the app (log4j config)
+
+What is cloudhub SLB (shared load balancer)
+Included "for free" with any cloudhub app deployment, uses a mulesoft certificate and cannot support "vanity domains“
+
+Organisation
+Top level, one per customer. Link to external identity provider (open id connect, SAML 2.0)
+
+Business group
+It comes under an organisation (or business group). Can be used for mini orgs within the overall org. LOB or region specific/autonomy, each need different users/roles/environments
+
+What is Identity management
+who has ability to sign into anypoint platform.
+
+
+
+What is VPC ? (virtual private cloud)
+AWS term for a network segment which can be connected to other VPC.
+
+Exchange is used for?
+Assets that relate to mule/Anypoint platform (e.g. api defintions, connectors/modules, custom policies)
+
+Supported API definition languages on Anypoint RAML (YAML), OAS (JSON or YAML) – Open API Spec
+
+What will be the Cloudhub logging limitations
+100mb or 30days
+
+What is Anypoint CLI?
+Command line interface to execute the commands in anypoint platform.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+On-Premise / Customer Hosted Environment
+
+
+What is Mule cluster
+This is mainly for customer hosted clustering where we can load balance servers. It uses hazel cast clustering to share the data across clusters.
+
+Why we would use domains?
+To avoid port conflicts for listeners, define a config in just one place (vs in all the apps on the same server)
+
+Key difference with customer-hosted vs cloudhub/RTF deployments of application
+Multiple apps on the same mule runtime
+
+Downside of sharing mule runtime with multiple apps?
+memory sharing, disk/io, one failure point impacts many apps, CPU shared
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+For more videos->https://www.youtube.com/c/TechLightning
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+AnyPoint Studio
+
+
+
+
+
+Until successful
+keeps re-executing whatever is inside it while it keeps erroring.
+
+First successful
+Fails over to other child routes if it gets a failure.
+
+Try scope
+allows catching errors
+
+On error continue scope
+Error handling scope that reports a success after executing all components within its scope
+
+On error propagate scope
+Error handling scope that reports an error/failure after executing all components within its scope
+
+Round robin
+Load balance by cycling through routes
+
+Scheduler
+Fixed schedule or CRON syntax scheduler - kicks off a flow as an event source
+
+
+Transform message
+Transform data from one to another style can be for payload, attribute or payload
+
+Batch job
+allows processing of thousands+ messages through a set of steps using many threads
+
+Batch aggregator
+allows chunking of the records to do bulk operations or streaming
+
+Batch step
+defines one part of the sequence of processing that a record will go through. Note: each record will go through these in order.
+
+Transactionally aware connectors?
+JDBC, VM, JMS (also others: IBM Mq series)
+
+Secure properties
+To secure properties in mule configurations
+
+Streaming in mule 4
+This will help to stream large XML.
+
+Watermark
+last retrieved id/date/some value which we can store it and we can use the value at the next time to retrieve the delta from the next time.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+General
+
+
+
+EDA - Event driven architecture
+Publishing and subscribing to events
+
+What might be suitable for ETL for large data sets
+Batch jobs -> with a set of steps to do the load/error handling
+
+Splunk/elk
+This is for log consumption and reporting/search/dashboarding for your logs. Logs from lots of systems/infra brought together.
+
+Maven
+build, test, deployment (cloudhub, RTF, on-prem)
+
+What is HA ?
+Highly Available
+
+What is persistent vs non-persistent object store?
+non-persistent means data stored in memory, persistent means, it stored disk and Data will survive even after restarts.
+
+Triggering a flow to pick up a file - options?
+on new file listener, to schedule and receive and process the files.
+
+
+
+
+For more videos->https://www.youtube.com/c/TechLightning
+
+	
+
+Thank you for watching ! Youtube channel for MuleSoft videos:
+https://www.youtube.com/c/TechLightning - Subscribe the channel and Click bell icon for notification
+
+
+What is the development methodology used in your project?
+Based on your project, explain one of the following approach.
+1) Waterfall development method
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2. Agile development methodology
+
+
+Many consider the waterfall method to be the most traditional software development method. The waterfall method is a rigid linear model that consists of sequential phases (requirements, design, implementation, verification, maintenance) focusing on distinct goals. Each phase must be 100% complete before the next phase can start. There’s usually no process for going back to modify the project or direction.
+Roles : Project Manager, Team Lead, Developer, Tester
+
+
+
+
+
+Teams use the agile development methodology to minimize risk (such as bugs, cost overruns, and changing requirements) when adding new functionality. In all agile methods, teams develop the software in iterations that contain mini- increments of the new functionality
+Roles : ProductOwner, Scurm Master, Scurm Team
+Other scrum terminologies:
+Sprint – generally 2 weeks.
+User story, scrum meetings (demo,retrospective)
+
+
+What is monolithic Architecture: In layman terms, you can say that its similar to a big container wherein all the software components of an application are assembled together and tightly packaged.
+Example Mule Runtime in On-premise instance.
+
+What is Microservices - also known as the microservice architecture - is an architectural style that structures an application as a collection of services that are. Highly maintainable and testable. Loosely coupled. Independently deployable. Organized around business capabilities.
+
+Example: application is running in CloudHub. Each worker will have one application and its independent.
