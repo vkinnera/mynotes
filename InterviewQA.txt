@@ -292,6 +292,31 @@ now the refund is done from the backend and we get response like "refund is Inti
 
 transform message takes the request message and transformed into required mule format.
 
+i have worked on a api called get_checkSimcardTechnology in which we have used api led connectivity structure 
+in these we have three layers 
+customer-information ux as experience layers 
+resource-inventory-management biz as process layer 
+tnm resource inventory management sys as a system layer 
+in this we get inputs from frontend called API consumer
+
+From the api consumer we get required inputs like business id, service number, physicalResourceId which are passed into the ux and 
+validate profile of mobile service[if it is prepaid or postpaid] and indicate if the customer have simcard with LTE technology or not, 
+In ux we do the validations for inputs and later it is routed to the biz layer using request connector. 
+
+In resource-inventory-management biz depending upon the business id and service number(queryParam),physicalResourceId we will route it to the sys layer 
+
+aria management system is connected to the backend and retrive the data, 
+business id and service number(queryParam) is passed to retrive data from get:/logicalResouce from sys
+business id and physicalresouceId is passed to retrive data from get:/physicalResource from sys
+
+
+in this we mapped using transform message and created a request to the backend to get the account no and details which is required for refund 
+after getting the acc details we have done the validations for date. 
+after the validations are done and again we mapped with the account details and payement id using transform message and created request to the backend 
+now the refund is done from the backend and we get response like "refund is Intiated". 
+
+transform message takes the request message and transformed into required mule format.
+
 
 
 
