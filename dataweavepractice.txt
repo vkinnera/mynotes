@@ -3133,4 +3133,49 @@ HTTP requestor
 API proxies?
 when ever we want to put non functional requirement outside of the functional requirement we need api proxies.
 
+Input:
+[
+  {
+    "a": "test"
+  },
+  {
+    "b": "test"
+  },
+  {
+    "c": "test2"
+  },
+  {
+    "d": "test3"
+  },
+  {
+    "e": "test3"
+  },
+  {
+    "f": "test3"
+  }  
+]
+Output:
+[
+  [
+    "a",
+    "b"
+  ],
+  [
+    "c"
+  ],
+  [
+    "d",
+    "e",
+    "f"
+  ]
+]
+Dataweave:
+%dw 2.0
+import * from dw::core::Arrays
+output application/json
+---
+valuesOf((payload reduce ((item, accumulator={}) -> accumulator++ item))groupBy ((item, index) -> item)) map ((item, index) -> keysOf(item))
+
+
+
  
