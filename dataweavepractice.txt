@@ -1724,8 +1724,9 @@ import * from dw::core::Dates
 output application/json
 ---
 {
-    "lastdayofmonth": atBeginningOfMonth(payload.lastday as Date {format: "dd-MM-yyyy"} + |P1M|  )- |P1D|
+    "lastdayofmonth": (atBeginningOfMonth(payload.lastday as Date {format: "dd-MM-yyyy"} + |P1M|  )- |P1D|).day
 }
+
 
 
 
