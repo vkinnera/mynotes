@@ -1,0 +1,292 @@
+				             					 MULESOFT
+postman
+-> To test web services we use postman platform with web service URL. dummy URLs to test for example dummy.restapiexample.com 
+
+
+****Integration/Middleware
+-> Software that links two seperate applications or commonly used to illustrate different products that function as a glue btw two seperate applications.
+-> It is a third party tool that allows you to connect two or more applications. These applications can be cloud-based or live on-premises.
+
+****Application Integration(A2A): Integrates various company-managed applications together, including cloud-based and remote systems.
+A2A : Application integration is the process of enabling independently designed applications to work together
+
+
+****B2B Integration: Integrates customer, provider and various alternative partner interfaces with various data resources and company-mnanaged applications.
+B2B Integration(google): Business-to-business (B2B) integration is the automation of business processes and communication between two or more organizations. 
+It allows them to work and trade more effectively with their customers, suppliers and business partners by automating key business processes.
+
+
+****Cloud Integration: Integrates with and also between the cloud services, cloud based applications(Saas), private clouds, trade hubs and other typical cloud resources
+through web services and standard B2B communication strategies(FTP, AS2, etc).
+Cloud Integration: At its most basic level, cloud integration means bringing multiple cloud environments together — either in a hybrid deployment or as multiple 
+public clouds — so that they can operate as a single, cohesive IT infrastructure for an enterprise.
+
+****what is mulesoft?
+-> This is also one of the integration software which helps to build the integration in your organization.
+It can do the designing of your API and build your API for your organization and also to integrate multiple systems in your organization.
+
+****Core componenet for mulesoft --> Mule runtime engine where we will deploy our integration.
+This platform will only deploy our code which will connect to different application to pass the data.
+Finally, Once we build the integration, we can host these services in the mule runtime.
+Mule runtime is the one which is going to host our services which is going to deploy our code.
+And it's going to run and execute the code and it's going to connect to different system and going to send tha data set.
+
+
+****Different components in mulesoft?
+
+------> Runtime Plane --------------------> Mulesoft Runtime
+------> Control Plane --------------------> Mulesoft Anypoint Platform --> Design Center,Exchange,Runtime Manager,API Manager,Access Management, Anypoint Monitoring.
+------> Mulesfot Anypoint Studio
+
+---> Runtime Plane:- Mule Runtime --- Mule runtime is the engine for connecting application, data, devices.
+---> Control plane:- Anypoint.mulesoft.com --- Any point platform through which we can administrate all our components and use it to deploy or manage Application,
+can monitor application
+
+
+****Design Center:- A design center is the development environment for a mule application as well as for our API specification. In design center, we can create API's
+with the hep of the RAML(Restful API Modeling Language), a YAML based language.
+Mule design center is a collaborative workspace in the Mulesoft Anypoint Platform that enables you to create, manage, and share API specifications using RAML
+We can create a new Mule application as well as new API specification.
+	-->>  Used to design API and also to design the integration to connect different platform and exchange.
+	-->> Create a Mule application or API Specification.
+
+****API Specification:- Provides a broad understanding of how an API behaves and how the API links with other APIs.
+****Mule Application:- In a typical flow, a Mule application receives a message through a source (such as HTTP listener component), transforms that message into a new format,
+and processes any business logic before writing the processed message to an external system in a format so that the system can read.
+
+****Anypoint Exchange:- publish our connectors,API so that others in our Organization can re-use it.
+Discover and use prebuilt assets from the mulesoft ecosystem or use Exchange to save,share, and reuse internal best practices.
+	-->> Library of assests, where we can publish our assests.
+
+****Runtime Manager:- Use to deploy and manage all of our Mule applications from one central location, whether your apps are running in the cloud, on-premises, or on Runtime fabric.
+
+****API Manager:- One of the component in the Anypoint platform. Secure APIs with policies, manage client access, group APIs as products, and monitor and analyze traffic. 
+No matter where our APIs and micro services are hosted and which technologies they turn on, you can manage them all from one place.
+
+****Access Management:- To create Anypoint Platform Account or configure federated External identity. Additionally, you can configure access and permissions within your Organization
+and, based on your access level, manage the users and roles. There is also an audit section where you can view what are activites happening from the user perspective like they are
+monitoring screen and they are deploying some application.
+
+****Anypoint Monitoring:- We can monitor our integration mainly to see how the service is performing. The monitoring tools provide feedback from mule flows and components in your app network.
+If the service is getting failed or success we can monitor that using Anypoint monitoring.
+
+****Anypoint Studio:- This is the Desktop IDE. To design Integration. We have palets on the right side which we can drag and drop and create project.
+Connect data to apps or build APIs graphically on desktop. Access, query, and transform data with the powerful DataWeave Language.
+Deploy applications on-premises or to the cloud. Test applications with the Mule runtime embedded in studio.
+In this we have Munit with which we can test as well as before deploying to the Mule Runtime.
+
+
+****DataWeave:- It is the Mulesoft expression Language for accessing and transforming data that travels through a Mule app.
+DataWeave is tightly Integrated with the mule runtime engine, which runs the scripts and expressions in your Mule app.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+											Mule Palette
+
+
+****HTTP Listener:-  also known as a network listener. The HTTP Listener Connector provides the most practical way to listen for HTTP requests.   
+****HTTP Requester:- The HTTP Request Connector provides the most practical way to consume an external HTTP service.
+****HTTP :-
+
+Components/Connectors in Core:-
+
+**Transformers::
+		**Set Variable:- Sets the current value of a mapping variable to a value you specify.
+		**Set Payload:- lets you update the payload of the message. The payload can be a literal string or a DataWeave expression.
+		**Remove Variable:- This component removes the specified variable from the Mule event.
+
+**Endpoints:- 
+		**Scheduler:- To trigger some time based event.Ex---> Data sync - schedule a specific time to sync the modified files for every week/day/hour using time-based event i.e Scheduler.
+				  Scheduler is mainly used for the batch-based Integration.
+				  
+				  Batch-based Integration:- It involves storing all the data in a single batch and moving it at schedules periods of time (or) only once a certain amount of data is collected.
+
+**Batch:- Batch processing. Mule allows you to process messages in batches.
+
+**Components:-
+		**Flow reference:- Flow Reference breaks the Mule application into discrete and reusable units. For example, 
+		  a flow that lists files on a regular basis might reference another flow that processes the output of the List operation.
+
+		**Loger:- This Core component helps you monitor and debug your Mule application by logging important information such as error messages, status notifications, payloads, and so on.
+
+		**Set Transaction ID:- sets an identifier for all tracked events so that meaningful information, such as order number is displayed for a transaction when analyzing tracked events at runtime,
+					     whether using the mule Management console or Cloudhub.
+	
+		**Transform message:- Dataweave transform component. The Transform (or Transform Message) component converts input data to a new output structure or format.
+
+		**Parse Template:- Parse Template is the Mule component to use for processing a template and obtaining a result. A template is defined as text with 
+					 embedded Mule expressions that are evaluated and replaced with their result.
+
+**Error Handling:-
+		
+		**Error handler:- This component executes when an error is raised and routes it to the first matching handler. The Mule default error handler logs the error information and 
+		   returns the event with the error object because it uses an on error propagate scope. This is called rethrowing the error and since this is the calling flow, 
+		   it returns an error response to the HTTP listener.
+		
+		**On Error Propagate:- Allows you to Propagate an error after executing other components. The components after the error will not be executed and returns a error response evry time for the next level.
+					     Exits with failure as a response.
+
+		**On Error Continue:- Allows you to continue after executing other components. The components after the error will not be executed but returns a success response.
+
+		**Raise Error:- Throws an error with specified type and description. errors like MULE:CONNECTIVITY,MULE:SECURTIY,MULE:VALIDATION errors.
+
+**Flow Control:-
+
+		**Choice:- Choice router adds conditional processing to a flow, similar to if/then/else. The Choice router dynamically routes messages through a flow according to a set of 
+			     DataWeave expressions that evaluate message content. Each expression is associated with a different routing option.
+
+		**Scatter-Gather:- Route our payload to different flows. Sends the same message to multiplemessage processors or Event processors or outbound endpoints in parallel.
+					 It executes all the event Processors parllely not sequentially. The payload we have before scatter gather will be gone. Payload from multiple EVent processors
+					 will be consolidated into one, payload after scatter gather will be available in console.
+
+		**First-successful-router:- When one route or option is successful then it won't execute other options or routes, the process ends at that success option. First successful is one of the 
+					    flow control components in Mule which iterates through message processors until one succeeds. The First Successful message processor iterates through its list 
+					    of child message processors, routing a received message to each of them in order until one processes the message successfully.
+		
+		**Round-Robin Router:- Round Robin is a Mule component that contains two or more processing routes and executes only one of the routes each time the flow executes the component.
+ 					     Each route within Round Robin is a scope that can contain one or more processors.
+
+**Scopes:-
+		**Async:- Processes the nested list of message processors asynchronously using a thread pool. Async scope processes the list of message processors simultaneously or in parallel. Async scope does not
+			    work as a reusable component. This can be used only when we want to invoke a message processor or event processor which has nothing to do with main flow simultaneously or in parallel.
+			    Whatever the output Async scope is processing and returning it will not be comming to the main flow. The main flow won't show the payload of Async scope. 
+		
+		**Cache:- The Cache scope is for storing and reusing frequently called data. You can use a Cache scope to reduce the processing load on the Mule instance and to increase 
+			    the speed of message processing within a flow. It is particularly effective for these tasks: Processing repeated requests for the same information.
+			    If the data is available in Cache then the data is taken from the cache, if not then it will be taken from the back-end database.
+
+		**Flow:- A pipeline of message processors that is called when a new message is received from message source.
+		
+		**For each:- It is similar to "for loop" in most programming languages. It takes a input as an collection, and iterates over the items in the collection, passing each one through
+				 the components placed inside the for each scope. If a particular item in a collection throws an execption, the for each scope will stop processing it and will invoke 
+				 an error handler. The For Each scope stores each item of the collection in payload during each iteration. For each processes the collection sequentially.
+
+		**Subflow:- A chain of message processors declared globally that can be referenced and reused in a flow by calling it with a Flow reference.
+				This can help keep flows organized by seperating out reusable groups of steps.
+
+		**Unitl Successful:- It will execute the flow or process of event processors till it is succesful, it will try again and again until the flow is success, we can limit the number of tries and 
+					 time gap between those tries. It will try again and again evrytime the flow fails and when the flow is success it stops there.
+		
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+											VM Module
+
+VM:-  Virtual Machine (VM Connector) manages intra-app and inter-app communication through either transient or persistent.
+	**Transient queues are faster than persistent queues, but they are not reliable if the system crashes. When system crashes data will be lost.
+
+	**Persistent queues are slower but reliable.Even when the system crashes data will be safe.
+	when to use:
+
+	**We use VM connector when we have to pass a message from one flow to another through a queuing mechanism, instead of flow-ref.
+	**When you want to distribute work across a cluster.
+
+VM Components:- publish,consume,Listener,Publish consume
+
+publish:- Used for publish message into the queue, dont wait for resposne, after publishing message then main thread execute next process in the flow or sub flow.
+
+Listener:- A source which creates and listens on VM queues. VM queues are created by placing listeners on them, which is why it contains parameters on queues behaviour such as it being 
+		persistent or transient.
+
+Consume:- Pull one message from queue, if the message is not available immediately then it'll wait upto queueTimeout after will throw a queueTimeout.
+
+Publish consume:- Used for publish message into the queue and wait for resposne from vm listner flow.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+											File Module
+
+On New or Updated File:- Triggers when a New file is created in directory. 
+
+
+Write:- Writes the given Content in the file pointed by the Path.
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+											
+											Object Store
+
+Object storage is a data storage architecture for storing unstructured data, which sections data into units—objects—and stores them in a structurally flat data environment. Each object includes the data, 
+metadata, and a unique identifier that applications can use for easy access and retrieval.
+
+The Cache scope only caches non-consumable payloads. It does not cache consumable payloads (such as a streaming payload), which can only be read once before they are lost. Object Store lets applications 
+store data and states across batch processes, Mule components, and applications, from within an application.
+
+
+**Store:- Stores the given value using the given key from object store.
+
+**Remove:- Removes a certain key and its value from object store.
+
+**Retrieve:- Retrieves specified value given by its key from object store.
+
+**Retrieve all:- Retrieves all keys and values from object store.
+
+**Retrieve all keys:- Retrieves all the keys stored from object store.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+											Salesforce
+sfdc.username=sv.manoharreddy@gmail.com
+sfdc.password=Nani@0508
+sfdc.tokennumber=EZyYnf3oJCsFpcmPaVqmINAc
+sfdc.loginurl=https://login.salesforce.com/services/Soap/u/55.0
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+											Mule Domain Project
+
+Mule domain project is a shared resource which provides same configuration element to multiple projects running in a single mule runtime.
+A Mule Domain Project is implemented to configure the resources that are shared among different projects. These resources can be used by all the projects associated with this domain. Mule applications 
+can be associated with only one domain, but a domain can be associated with multiple projects.
+
+In mule domain project there will be no message flow to drag and drop mule components, there will be only global elements and configuration XML. The configuration element created in Mule domain project 
+can be used in multiple projects with same port number. To use Mule domain project configuration element, properties of the project in which the configuration is going to be used should be changed 
+and to do that ---------->  go to properties of that project in which configuration should be used from Mule domain --> change the domain in Mule project to the Mule project domain in which 
+configuration element is created.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+											Java Module
+
+Invoke static:- Operation that allows the user to invoke static methods with the provided arguments. The identifier of the method to be invoked includes the class and method names, being the method a 
+		    full description of its signature including the types of each parameter.
+
+New:- Operation that allows the user to create new instance of the given class. The identifier of the constructor to be used includes the class and constructor names, being the constructor a
+	full description of its signature including the types of each parameter.
+
+Invoke:- Operation that allows the user to invoke methods with the provided args on the given instance. The identifier of the method to be invoked includes the class and method names, being the method a
+	   full description of its signature including the types of each parameter.
+
+How to invoke a non static method???
+
+-> using NEW to create instance --> once instance details available we are using invoke method and using instance details in INVOKE --> also specifiying from which class we are invoking and then Map the details.
+-> when invoking an non-static method we need to instantiate the class
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+											Munit
+
+MuleSoft has a framework called MUnit that allows us to write automated test cases for our APIs and integrations. MUnit is a Mule application testing framework that allows you to easily build automated tests for 
+your integrations and APIs. It provides a full suite of integration and unit test capabilities, and is fully integrated with Maven and Surefire for integration with your continuous deployment environment.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+JSON Schema:- JSON Schema is an IETF standard providing a format for what JSON data is required for a given application and how to interact with it. we are going to validate some data with JSON schema, only if
+		  the data is validated then the process continues further, else it throws an error "JSON cotent is not compatiable with the schema".
+
+Ex:- JSON schema which has the format of data. like -->>> name = String, age=integer >= 0.
+data --->>> name="john", age= 20 --->>> name is string, age is integer just like in JSON schema.
+Since the data matches with the JSON schema(format) the validation is success and the process continues further.
+
+data --->>> name=20, age=6 ---->>> In JSON schema name is a string but in data name is integer.
+Since the data is not compatiable with the JSON schema(format) the validation is failure and will throw and error, process will not contiue further.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+	
