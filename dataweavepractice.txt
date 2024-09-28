@@ -3247,7 +3247,10 @@ output application/json
 ---
 {"hyphenate": (["a","b","c"] joinBy  "-") }
 
+how do you perform null check in dataweave?
+the isEmpty() is used to perform null check in dataweave.
 
+flow.name is used to retrive the flow name and app.name is used to retrive app name.
 
 
 
