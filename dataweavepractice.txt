@@ -3228,6 +3228,16 @@ difference between pluck and mapObject?
 both pluck and mapObject iterates over a object but pluck outputs 	the object values into
 an array and mapobject outputs as an Object.
 
+How to log a message in dataweave?
+we can log a message using log function.
+%dw 2.0
+output application/json
+---
+log("WARNING","Houstan, we have a problem")
+
+output:
+"Houstan, we have a problem"
+
 
 
 
