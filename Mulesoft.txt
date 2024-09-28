@@ -288,6 +288,11 @@ Since the data is not compatiable with the JSON schema(format) the validation is
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Agile methodology is a project management framework that breaks projects down into several dynamic phases, commonly known as sprints.
+Agile is project management framework.
+Agile framework is an iterative methodology. After every sprint, teams reflect and look back to see if there was anything that could be improved so they can adjust their strategy for the next sprint.
+Scrum is an Agile framework used for developing, delivering complex products through short, iterative cycles called sprints. It emphasizes collaboration, accountability, and continuous improvement.
+
 
 AGILE
 
