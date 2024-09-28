@@ -817,6 +817,36 @@ How can you connect or the external service provider?
 Organiser
 Top level one per customer link to external Identity provider(OpenId connect, SAML 2.0).
 
+API-led Connectivity:
+
+Q. Explain API led architecture.
+
+API led architecture model is one of the best practices specified by mulesoft in designing and developing APIs. It is widely used across the industry.We follow a 3 layered approach in API led architecture. i.e
+
+1. System layer
+
+2. Process layer
+
+3. Experience layer
+
+System layer: All APIS developed in the system layer are connected to external systems such as databases, third party APIs, salesforce systems to
+
+fetch the data. We don't apply any business logic in this layer but send the data to the process layer.
+
+Process layer: We apply the business logic required on the data. It acts as an intermediate layer between systems and the process layer. The Process API sends the response to the experience layer.
+
+I
+
+Experience layer: APIs are exposed to the clients such as mobile apps or web application. These APIs are just a wrapper for processor systems APIS.
+
+Q. Why do you require more experience APIs rather than one for the same requirement? It depends on the business requirement, the no. of experience apis to be created.
+
+Example1: The business team gave a requirement and there are two experience systems mobile app and web application which are consuming the experience API but mobile app requires less data when compared to the web applications. In that case we have to develop two diff exp APIs to fulfil the requirement.
+
+Example2: The exp API is being consumed by a third party and internal systems. In this case, there is an extra policy applied when the api is being consumed by third party api but the same is not required in case of internal system. So we have to deploy two exp APIS.
+
+It may not be mandatory all the time, it depends on the business requirement.
+
 
 
 
