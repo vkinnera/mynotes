@@ -289,4 +289,145 @@ Since the data is not compatiable with the JSON schema(format) the validation is
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+AGILE
+
+Agile Methodology Overview
+
+	•	Definition: Agile is a project management approach focused on delivering small, incremental product improvements frequently, while adapting to changes based on customer feedback.
+	•	Core Values (Agile Manifesto):
+	1.	Individuals and interactions over processes and tools.
+	2.	Working software over comprehensive documentation.
+	3.	Customer collaboration over contract negotiation.
+	4.	Responding to change over following a plan.
+	•	Key Principles:
+	•	Frequent delivery of working software.
+	•	Welcoming changing requirements.
+	•	Continuous customer collaboration.
+	•	Teams reflect regularly to improve.
+
+Scrum Framework
+
+Key Roles:
+
+	•	Product Owner: Prioritizes the product backlog and represents the customer.
+	•	Scrum Master: Facilitates the process, removes obstacles, and ensures adherence to Scrum practices.
+	•	Development Team: Cross-functional team responsible for delivering the product increment during each sprint.
+
+Scrum Events (Ceremonies):
+
+	1.	Sprint: A 2-4 week iteration where a specific set of work is completed.
+	2.	Sprint Planning: The team selects items from the product backlog and defines what will be done in the sprint.
+	3.	Daily Standup: A short, 15-minute daily meeting where team members discuss progress and obstacles.
+	4.	Sprint Review: Held at the end of the sprint to demonstrate completed work to stakeholders for feedback.
+	5.	Sprint Retrospective: After the sprint, the team reflects on what went well and what could be improved.
+
+Scrum Artifacts:
+
+	•	Product Backlog: A prioritized list of features, bug fixes, and improvements the team will work on.
+	•	Sprint Backlog: A subset of the product backlog chosen for the current sprint.
+	•	Increment: The working, potentially shippable product delivered at the end of a sprint.
+
+Important Concepts in Scrum:
+
+	•	User Stories: Short, simple descriptions of a feature from the user’s perspective.
+	•	Story Points: A relative measure of effort and complexity for a task or user story.
+	•	Definition of Done (DoD): A shared understanding of what it means for a task to be complete (e.g., coded, tested, and documented).
+	•	Velocity: The amount of work completed during a sprint, helping in planning future sprints.
+	•	Burn-down Chart: A chart that shows the amount of remaining work over time in a sprint.
+
+Benefits of Scrum:
+
+	•	Clear structure and roles.
+	•	Time-boxed sprints allow frequent delivery.
+	•	Continuous feedback from stakeholders.
+	•	Reflective retrospectives for continuous improvement.
+
+Kanban Framework
+
+Kanban Overview:
+
+	•	Definition: Kanban is a visual management method for tracking and improving workflow. It doesn’t use time-boxed sprints but focuses on continuous delivery and improving flow.
+	•	Key Principles:
+	•	Visualize the work.
+	•	Limit Work in Progress (WIP) to avoid overloading the team.
+	•	Manage and optimize flow by ensuring tasks move smoothly through stages.
+	•	Continuous improvement of the process.
+
+Kanban Board:
+
+	•	A board with columns that represent different stages of work (e.g., “To Do,” “In Progress,” “Done”).
+	•	Tasks are visualized as cards, and they move across the board as they are completed.
+
+WIP Limits:
+
+	•	Limiting the number of tasks that can be worked on at once ensures that the team focuses on completing tasks rather than starting too many at the same time.
+
+Performance Metrics in Kanban:
+
+	•	Lead Time: Time taken from when a task is added to the board to when it is completed.
+	•	Cycle Time: Time taken from when a task starts to when it is finished.
+	•	Throughput: Number of tasks completed in a given period.
+
+Differences Between Scrum and Kanban:
+
+	•	Scrum: Uses time-boxed sprints, predefined roles, and ceremonies. Tasks are planned at the start of each sprint.
+	•	Kanban: Focuses on continuous delivery, flow management, and does not require sprints or specific roles.
+
+Key Agile Concepts and Practices
+
+	1.	User Stories: Simple descriptions of features from the user’s perspective (e.g., “As a user, I want X so that Y”).
+	2.	Task Breakdown: Each user story is broken into smaller tasks that are manageable within a sprint or workflow.
+	3.	Continuous Integration (CI): Frequently merging code to a shared repository to detect and fix integration issues early.
+	4.	Test-Driven Development (TDD): Writing tests before writing the actual code to ensure high-quality software.
+	5.	Minimum Viable Product (MVP): The smallest usable version of a product that can be released to gather feedback.
+	6.	Backlog Grooming/Refinement: Regularly reviewing and refining the product backlog to ensure it is up-to-date and ready for the next sprint.
+	7.	Cross-Functional Team: Teams with members from various disciplines (e.g., developers, testers) working together to complete tasks.
+	8.	Risk Management in Agile: Managed through short sprints, frequent releases, and constant feedback, allowing teams to address issues early.
+	9.	Pair Programming: Two developers work together on the same code—one writes, and the other reviews.
+
+Common Agile Interview Questions and Answers
+
+	1.	What is Agile methodology?
+Answer: Agile is an iterative approach to project management that focuses on delivering products incrementally through collaboration, flexibility, and continuous improvement.
+	2.	What is a sprint in Agile?
+Answer: A sprint is a short, time-boxed iteration (2-4 weeks) where a team works on specific tasks to deliver a product increment.
+	3.	What is a product backlog?
+Answer: A prioritized list of features and requirements that need to be implemented, managed by the Product Owner.
+	4.	What is velocity?
+Answer: Velocity is the measure of the amount of work a team can complete during a sprint, used for future sprint planning.
+	5.	What is a burn-down chart?
+Answer: A burn-down chart visualizes the amount of work remaining in a sprint or project over time.
+	6.	What are WIP limits in Kanban?
+Answer: Work in Progress limits restrict the number of tasks that can be worked on at the same time to improve efficiency.
+	7.	What is a user story?
+Answer: A short, simple description of a feature from the user’s perspective.
+	8.	What is the role of a Scrum Master?
+Answer: A Scrum Master ensures the team follows Scrum practices, facilitates meetings, and removes obstacles.
+	9.	What is the difference between Scrum and Kanban?
+Answer: Scrum uses fixed-length sprints, defined roles, and structured ceremonies. Kanban focuses on continuous flow, WIP limits, and visualizing work.
+	10.	How does Agile handle changing requirements?
+Answer: Agile welcomes changes at any stage, allowing teams to re-prioritize tasks and adapt to customer needs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
