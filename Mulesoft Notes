@@ -881,6 +881,9 @@ Testing In this phase, the QA team will extensively test the applications and ra
 security policies and test locally.
 
 Deploy After successful testing, deploy the applications to the prod environment. Monitor In this phase, logs monitoring and troubleshooting happens.
+------------------------------------------------------------------
+
+Web Services | REST | SOAP | HTTP Methods & Status Response Codes
 
 
 
