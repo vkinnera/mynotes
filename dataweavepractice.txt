@@ -3207,6 +3207,21 @@ now() as Date,
  now().month
 ]
 
+Dataweave: skipNullOn will skip the null the null values and outputs the result.
+%dw 2.0
+output application/json skipNullOn = "everywhere"
+---
+{
+message: payload.message,
+name: payload.name
+}
+output:
+{
+  "message": "Hello world!"
+}
+
+
+
 
 
 
