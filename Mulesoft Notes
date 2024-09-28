@@ -885,6 +885,30 @@ Deploy After successful testing, deploy the applications to the prod environment
 
 Web Services | REST | SOAP | HTTP Methods & Status Response Codes
 
+Web Services:
+
+1. What is a web service?
+
+API stands for Application Programming Interface. API is a piece of code that helps two different systems to communicate and
+
+exchange data with each other.
+
+Web Service is a piece of code that helps two different systems to communicate and exchange data with each other over the Internet. Two types of Web Services are available i.e. REST and SOAP
+
+2. What is a REST web service?
+
+REST stands for Restful State transfer. It follows the HTTP protocol which accepts JSON, XML, HTML, and text plain as inputs. REST uses RAML for documentation, it contains resources, request and response details, security schemes, and documentation.
+
+3. What is a SOAP web service?
+
+SOAP stands for Simple Object Access Protocol. It is an XML-based protocol that accepts XML data as the input. SOAP uses WSDL(Web Service Descriptive Language) for documentation, it contains resources, requests, and response details. SOAP is platform and language-independent.
+
+4. What are the differences between REST and SOAP web services?
+
+a) REST stands for Representational State Transfer and SOAP stands for Simple Object Access Protocol.
+
+b) SOAP is a protocol whereas REST is an architectural pattern.
+
 
 
 
