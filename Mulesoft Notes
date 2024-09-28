@@ -909,6 +909,38 @@ a) REST stands for Representational State Transfer and SOAP stands for Simple Ob
 
 b) SOAP is a protocol whereas REST is an architectural pattern.
 
+h) SOAP defines its security whereas Rest inherits from underlying transport.
+
+1) SOAP is less preferred over REST because of its complexity.
+
+5. When to choose REST and when to choose SOAP?
+
+REST is the more popular choice for modern web services due to its simplicity and flexibility. However, SOAP remains relevant for specific use cases requiring strong security and standardized communication.
+
+6. What are query parameters?
+
+Query parameters are used to filter, sort, and paginate the collection of a result. They are passed at the end of the URL after a question mark.
+
+For example, accounts in active state. /accounts?status=active
+
+7. What are URI parameters?
+
+URI stands for Unique Resource Identifier. It is passed as a parameter in the URL and it identifies a unique instance of a
+
+resource type. It should be a unique identifier. For example, customer ID to get the loan and account details of a customer. /{customerId)
+
+8. What are the differences between query and URI parameters? When to choose what?
+
+9 What are the different HTTP methods used?
+
+Answer:
+
+GET to fetch the available resources (200 status code)
+
+POST
+
+to create a new resource(201)
+
 
 
 
