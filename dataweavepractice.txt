@@ -3252,6 +3252,11 @@ the isEmpty() is used to perform null check in dataweave.
 
 flow.name is used to retrive the flow name and app.name is used to retrive app name.
 
+Explain readUrl in dataweave?
+readUrl is used to read the URL or file and returns the content in it.
+readUrl('classpath://<path of dwl file>', 'applicatio/json')
+
+
 
 
  
