@@ -3177,6 +3177,38 @@ output application/json
 ---
 valuesOf((payload reduce ((item, accumulator={}) -> accumulator++ item))groupBy ((item, index) -> item)) map ((item, index) -> keysOf(item))
 
+Output:
+[
+  "2024-09-28T09:45:22.580665Z",
+  "2024-09-28T15:15:22.580669+05:30",
+  "2024-Sep-28",
+  "2024-09-28",
+  "2024-Sep-28",
+  "2024-09-28T10:00:22.580891Z",
+  "2024-10-08T09:45:22.580906Z",
+  2024,
+  28,
+  9
+]
+Dataweave:
+%dw 2.0
+output application/json
+---
+[
+now(),
+now() >> "IST",
+now() as Date {format: "yyyy-MMM-dd"},
+now() as Date,
+ "2024-09-28" as Date {format: "yyyy-MM-dd"} as Date{format: "yyyy-MMM-dd"},
+ now() + |PT15M|,// PT is used to increase time in minutes, hours and seconds
+ now() + |P10D|,// P is used to increase time in days, months and years
+ now().year,
+ now().day,
+ now().month
+]
+
+
+
 
 
  
