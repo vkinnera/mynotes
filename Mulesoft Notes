@@ -816,6 +816,9 @@ Included for free for any cloudhub app deployment uses a mulesoft certificate an
 How can you connect or the external service provider?
 Organiser
 Top level one per customer link to external Identity provider(OpenId connect, SAML 2.0).
+---------------------------------------------------------------------------------------------------------------------------------------
+Interview Questions Youtube
+
 
 API-led Connectivity:
 
@@ -846,6 +849,38 @@ Example1: The business team gave a requirement and there are two experience syst
 Example2: The exp API is being consumed by a third party and internal systems. In this case, there is an extra policy applied when the api is being consumed by third party api but the same is not required in case of internal system. So we have to deploy two exp APIS.
 
 It may not be mandatory all the time, it depends on the business requirement.
+
+10.why to follow API led architecture?
+
+Advantages:
+
+1. It increases the reusability
+
+2. Limited functionality will be affected when there is any break
+
+3. Time to market will be faster in the long run
+
+4. Easy to maintain.
+
+Disadvantages:
+
+Instead of one API we are developing 3 apis so it takes more time in the initial phases. As we are developing more no. of apis we require more vCores, it will increase the cost of maintenance.
+
+Q. How to establish the communication b/n system, process and exp layers?
+
+99% of the time http requests are used to establish communication and we can expose API as a connector and use that as a connector.
+
+Q. Explain API lifecycle in Mule. I
+
+Design, Implementation, Testing, Deploy and Monitor covers API lifecycle. Design In this phase, API specification is designed using
+
+the feedback and make necessary changes if required. RAML in Design Centre and then publish to Exchange. Ask the business users to give Implementation In implementation phase, generate RAML based flows in Anypoint Studio and start implementing the code. Develop MUnits, apply
+
+Testing In this phase, the QA team will extensively test the applications and raise bugs. Solve the bugs and ask the testing team to re-test.
+
+security policies and test locally.
+
+Deploy After successful testing, deploy the applications to the prod environment. Monitor In this phase, logs monitoring and troubleshooting happens.
 
 
 
