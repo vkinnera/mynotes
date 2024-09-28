@@ -3238,6 +3238,15 @@ log("WARNING","Houstan, we have a problem")
 output:
 "Houstan, we have a problem"
 
+how do you convert array to a string?
+joinBy merges arrays in to a string value and uses the provided string as a separator between each item in the list.
+splitBy do opposite task of joinBy()
+
+%dw 2.0
+output application/json
+---
+{"hyphenate": (["a","b","c"] joinBy  "-") }
+
 
 
 
