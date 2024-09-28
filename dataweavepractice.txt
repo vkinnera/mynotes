@@ -3220,7 +3220,13 @@ output:
   "message": "Hello world!"
 }
 
+what is pluck function?
+pluck function iterates over an objects outputs them into an array.
+pluck(value,key,index) -> {}, input object and output is an array
 
+difference between pluck and mapObject?
+both pluck and mapObject iterates over a object but pluck outputs 	the object values into
+an array and mapobject outputs as an Object.
 
 
 
