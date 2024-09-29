@@ -948,10 +948,47 @@ Answer:
 
 GET to fetch the available resources (200 status code)
 
-POST
+POST to create a new resource(201)
 
-to create a new resource(201)
+to completely update a resource or create a new resource if it doesn't exist.
 
+PUT
+
+PATCH to partially update a resource
+
+DELETE to delete a resource
+
+It is not mandatory to follow the same as specified but it is the best practice and widely followed. It will avoid confusion for the consumer of APIS.
+
+10. What is the difference between PUT and PATCH?
+
+11. What is the difference between POST and PUT?
+
+12. Explain some of the HTTP response codes used
+
+Answer: HTTP response codes are used to indicate the status of a request made to a server. Here are some of the commonly used HTTP response codes and their meanings:
+
+1xx informational response
+
+2xx successful
+
+3xx redirection
+
+4xx client error
+
+5xx server error
+
+200 OK The request was successful, and the server returned the requested data.
+
+201 Created The
+
+request was successful, and a new resource has been created on the server. The request was successful, but there is no data to return.
+
+204 No Content
+
+The request could not be understood or was missing the required parameters.
+
+400 Bad Request
 
 
 
