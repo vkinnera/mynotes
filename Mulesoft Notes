@@ -1008,5 +1008,10 @@ Answer: HTTP response codes are used to indicate the status of a request made to
 
 504 Gateway Timeout The server acting as a gateway or proxy did not receive a timely response from the upstream server.
 
+------------------------------------------------------------------------
+ Anypoint Studio | Connectors | Components | Scopes | Development
+
+
+
 
 
