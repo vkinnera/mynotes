@@ -1010,6 +1010,33 @@ Answer: HTTP response codes are used to indicate the status of a request made to
 
 ------------------------------------------------------------------------
  Anypoint Studio | Connectors | Components | Scopes | Development
+What are the differences between Mule 3 and Mule 4?
+
+a) The project structure is mavenized by default in M4 but we have to manually do it in M3.
+
+b) The message structure is changed in M4 when compared to M3. M4 has payload, attributes, and variables. M3 has payload, inbound properties, outbound properties, record variables, session variables, and flow variables.
+
+c) M4 has a self-tuning runtime engine when compared to M3.
+
+d) M4 has more robust error handling with on-error continue, on error propagate and raise error components.
+
+e) Mule Expression Language in M3 is completely replaced with Dataweave 2.x in
+
+M4.
+
+f) Anypoint Studio 6.x works with M3 but Anypoint Studio 7.x works with M4.
+
+g) Error handling is different robust in M4 compared to M3.
+
+Q. What is the difference between flow, sub-flow, and private flow?
+
+Flow contains source, process, and error handling. It can be exposed to consumers and work independently.
+
+Private flow doesn't have a source but has its own error handling. It can be called
+
+in synchronous or asynchronous mode.
+
+Sub-flow contains only processes and it inherits process and error handling from
 
 
 
