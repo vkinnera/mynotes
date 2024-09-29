@@ -1028,15 +1028,21 @@ f) Anypoint Studio 6.x works with M3 but Anypoint Studio 7.x works with M4.
 
 g) Error handling is different robust in M4 compared to M3.
 
-Q. What is the difference between flow, sub-flow, and private flow?
+Q. Can you tell me which versions of Anypoint Studio and Mule Runtime you are compatible with?
+
+I am currently using 7.12 and 4.2.2 versions of Anypoint Studio and Mule Runtime
+
+Q. Can you tell me which versions of Anypoint Studio and Mule Runtime are the latest?
+
+7.18 and 4.6 are the latest versions of Anypoint Studio and Mule Runtime
+
+Q. What are the differences between flow, sub-flow, and private flow?
 
 Flow contains source, process, and error handling. It can be exposed to consumers and work independently.
 
-Private flow doesn't have a source but has its own error handling. It can be called
+Private flow doesn't have a source but has its error handling. It can be called in synchronous or asynchronous mode.
 
-in synchronous or asynchronous mode.
-
-Sub-flow contains only processes and it inherits process and error handling from
+Sub-flow contains only processes and it inherits process and error handling from the parent flow	
 
 
 
