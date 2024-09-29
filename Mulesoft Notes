@@ -1044,6 +1044,34 @@ Private flow doesn't have a source but has its error handling. It can be called 
 
 Sub-flow contains only processes and it inherits process and error handling from the parent flow	
 
+Q. Explain configuration of file, FTP, and SFTP?
+
+1. File - Mention path
+
+2. FTP - Host, port, username, password and path
+
+3. SFTP - Host, port, username, password, path, authentication details and proxy details.
+
+Note: 10 MB file will be handled by 0.1 vcore(500 MB). If it is not supported go for vertical scaling by increasing vCores.
+
+Q. What operations have you used in FTP, File or SFTP connectors?
+
+Read to read the file
+
+List - to list the files in a directory
+
+On new or update file to trigger the flow when there is a new file or update in the same file. It can be used in source.
+
+Copy-copy the file content.
+
+Move move file from one directory to another directory
+
+Write to write the content to a new file.
+
+Create directory - to create a new directory.
+
+Q. What is fixed frequency and cron?
+
 
 
 
