@@ -905,14 +905,25 @@ SOAP stands for Simple Object Access Protocol. It is an XML-based protocol that 
 
 4. What are the differences between REST and SOAP web services?
 
+A
+
 a) REST stands for Representational State Transfer and SOAP stands for Simple Object Access Protocol.
 
 b) SOAP is a protocol whereas REST is an architectural pattern.
 
+c) SOAP uses WSDL to define API whereas REST uses RAML
+
+d) SOAP works with only XML data format whereas REST works with JSON, XML, HTML, and plain text.
+
+e) SOAP needs more bandwidth than REST.
+
+f) SOAP cannot make use of REST but REST can make use of SOAP or HTTP protocol.
+
+g) SOAP uses services interfaces to expose business logic whereas REST uses URI.
+
 h) SOAP defines its security whereas Rest inherits from underlying transport.
 
-1) SOAP is less preferred over REST because of its complexity.
-
+i) SOAP is less preferred over REST because of its complexity.
 5. When to choose REST and when to choose SOAP?
 
 REST is the more popular choice for modern web services due to its simplicity and flexibility. However, SOAP remains relevant for specific use cases requiring strong security and standardized communication.
