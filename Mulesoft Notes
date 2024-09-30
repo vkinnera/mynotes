@@ -1099,7 +1099,13 @@ The Until Successful scope executes processors within it, in order, until they a
 fails to connect or to produce a successful result, Until Successful retries all the processors within it, including the one that failed, until all configured retries are exhausted. If a retry succeeds, 
 the scope proceeds to the next component. If the final retry does not succeed, Until Successful produces an error of type MULE:RETRY_EXHAUSTED
 
+Q. What is the difference between reconnection strategy and until successful scope?
 
+A. When the reconnection strategy is configured for any of the connectors, it will retry only when there is a connectivity error. But in case of until successful
+
+scope, it will retry for every error type.
+
+The number of retries and frequency for each retry can be configured in both.
 
 
 
