@@ -1079,6 +1079,25 @@ Frequency, start delay and time unit are the configurations for fixed frequency.
 Cron-Cron is used to describe time and date information. The scheduler will check and whenever the cron expression matches then it will trigger the flow.
 
 Expression and Time zone are required for configuring cron job. 
+Q. How do you make sure another trigger will not be initiated by the Scheduler component till the previous trigger completes the process?
+
+Configure disallowConcurrentExecution="true" as an attribute in the scheduler XML tag.
+
+Q. Explain Reconnection Strategy.
+
+A. Reconnection Strategy is used to connect to the corresponding system when there is a connection issue. We have three values in the dropdown - None, Standard and Forever. We should define frequency and attempts.
+
+None - It is by default and no reconnect attempts will happen.
+
+Standard - We can specify the number of attempts and frequency to reconnect.
+
+Forever - It is rarely used and it continuously retries until it is connected.
+
+Q. What is Until Successful?
+
+The Until Successful scope executes processors within it, in order, until they all succeed or the scope exhausts the maximum number of retries. Until Successful runs synchronously. If any processor within the scope 
+fails to connect or to produce a successful result, Until Successful retries all the processors within it, including the one that failed, until all configured retries are exhausted. If a retry succeeds, 
+the scope proceeds to the next component. If the final retry does not succeed, Until Successful produces an error of type MULE:RETRY_EXHAUSTED
 
 
 
