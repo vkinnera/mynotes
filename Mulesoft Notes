@@ -1107,5 +1107,13 @@ scope, it will retry for every error type.
 
 The number of retries and frequency for each retry can be configured in both.
 
+Q. Explain the differences between For Each, Parallel For Each, and Batch Processing.
+
+A. For each component processes messages sequentially and it is single- threaded. For-each execution will stop when an error is raised. It won't alter the original payload.
+
+I Parallel for each component processes messages in parallel and it is multithreaded. It will execute all the routes before it raises the error of type MULE:: COMPOSITE ROUTING. It outputs a collection of output messages from each item. We have the provision to control the number of threads by specifying the max concurrency property.
+
+In Batch processing, it processes messages parallel, and it is multithreaded. By default, we will receive the successful and failed records' status in the on- complete step.
+
 
 
