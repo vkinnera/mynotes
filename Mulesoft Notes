@@ -1072,6 +1072,14 @@ Create directory - to create a new directory.
 
 Q. What is fixed frequency and cron?
 
+Time specified to poll at regular intervals is the fixed frequency. For example, 1000 ms
+
+Frequency, start delay and time unit are the configurations for fixed frequency.
+
+Cron-Cron is used to describe time and date information. The scheduler will check and whenever the cron expression matches then it will trigger the flow.
+
+Expression and Time zone are required for configuring cron job. 
+
 
 
 
