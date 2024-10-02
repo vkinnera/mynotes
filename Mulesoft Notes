@@ -1111,9 +1111,24 @@ Q. Explain the differences between For Each, Parallel For Each, and Batch Proces
 
 A. For each component processes messages sequentially and it is single- threaded. For-each execution will stop when an error is raised. It won't alter the original payload.
 
-I Parallel for each component processes messages in parallel and it is multithreaded. It will execute all the routes before it raises the error of type MULE:: COMPOSITE ROUTING. It outputs a collection of output messages from each item. We have the provision to control the number of threads by specifying the max concurrency property.
+I Parallel for each component processes messages in parallel and it is multithreaded. It will execute all the routes before it raises the error of type MULE:: COMPOSITE ROUTING. 
+It outputs a collection of output messages from each item. We have the provision to control the number of threads by specifying the max concurrency property.
 
 In Batch processing, it processes messages parallel, and it is multithreaded. By default, we will receive the successful and failed records' status in the on- complete step.
+
+Q. What is Anypoint Exchange and why is RAML published to exchange?
+
+Anypoint Exchange is a central repository to share Mulesoft resources such as API specifications, connectors, templates, examples, etc. within or outside the organization.
+
+RAML is published to exchange, give access to stakeholders, and take feedback. Also, it is used to create an asset in API Manager for applying policies.
+
+Q. What is a custom connector?
+
+When Mulesoft out-of-box connectors are not able to satisfy the requirement then we can design and develop a custom connector and use it across our company.
+
+Q. What is Async scope and when do you use it?
+
+Async scope will generate a separate thread and the processing happens in that thread. Async scope will not respond to the flow. For example, to execute a separate process which is time-consuming and independent of the main process then go for async scope.
 
 
 
