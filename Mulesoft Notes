@@ -1169,4 +1169,8 @@ Total time taken by scatter-gather is the maximum time taken by one of the route
 
 Payload and "HELLO" variable-SG 2 routes---> 1. Array of payload of different branches, New variable generated in one route, modified existing variable "HELLO WORLD"
 
+Q. what happens to a variable?
+Q. Make scatter gather synchronous?
+
+
 
