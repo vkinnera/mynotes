@@ -1188,6 +1188,11 @@ Q. What are the connectors that support transactions?
 JMS, VM and Database connectors support transactions
 
 Q. Explain JMS configuration.
-
+Required libraries
+username
+password
+broker Url
+destination
+destination path
 
 
