@@ -1222,4 +1222,24 @@ Q. Explain VM connector and its use cases.
 
 VM queue is used as an internal queue for intra-app and inter-app communication in a clustered environment. It works in async mode. A persistent queue is reliable and slower. Transient queue is faster and not reliable.
 
+Use cases:
+
+When a full JMS broker usage is not justified.
+
+• Pass messages through a queuing mechanism from one flow to another flow.
+
+Q. Explain the different operations of VM connector.
+
+Listener-It is a source component that listens to the message published
+
+PublishTo publish the message to queue
+
+Consume - To consume the message from queue
+
+Publish consume - It will wait for the response and acts synchronously.
+
+Q. What is the difference between Publish and Publish Consume in VM or JMS connectors?
+
+Publish is asynchronous and Publish Consume is synchronous
+
 
