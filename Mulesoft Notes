@@ -1209,4 +1209,16 @@ Q. What is a topic in messaging services?
 
 A topic is a pipeline of messages, where a message comes in and goes to every subscriber. You should for topic when there are multiple subscribers for the same message(pub-sub model).
 
+Q. What are the differences between queue and topic?
+
+The differences between queues and topics in MuleSoft:
+
+Delivery Model: Queues follow a point-to-point (PTP) model, ensuring a single message is delivered to only one consumer. Conversely, topics utilize a publish-subscribe model, where a single message can be broadcast to all interested subscribers concurrently.
+
+Message Order and Consumption: Queues guarantee message order - messages are processed in the order they are received. Each consumer retrieves and processes messages one at a time. Topics, on the other hand, don't guarantee message order. Subscribers might receive messages in a different order than they were published, and each subscriber receives a copy of the message independently.
+
+Q. Explain VM connector and its use cases.
+
+VM queue is used as an internal queue for intra-app and inter-app communication in a clustered environment. It works in async mode. A persistent queue is reliable and slower. Transient queue is faster and not reliable.
+
 
