@@ -1171,6 +1171,23 @@ Payload and "HELLO" variable-SG 2 routes---> 1. Array of payload of different br
 
 Q. what happens to a variable?
 Q. Make scatter gather synchronous?
+Q. Explain for-each scope.
+
+Foreach splits a payload into elements and processes them one by one sequentially through the components placed inside foreach. It will accept lists and arrays. It is single-threaded.
+
+Payload [1,2,3] and variable "HELLO" FOREACH "HELLO WORLD" > payload no change and variable "HELLO WORLD" modified. Response inside for each [1] [2] [3]
+
+Q. Explain parallel for-each scope,
+
+Parallel for-each splits the payload into elements and processes them parallelly. It will accept lists and arrays. It is multi-threaded. A
+
+Payload [1,2,3] and variable "HELLO" -PFE> payload will change(collection of all payloads) and variable "HELLO" no change.
+
+Q. What are the connectors that support transactions?
+
+JMS, VM and Database connectors support transactions
+
+Q. Explain JMS configuration.
 
 
 
