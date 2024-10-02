@@ -1130,5 +1130,31 @@ Q. What is Async scope and when do you use it?
 
 Async scope will generate a separate thread and the processing happens in that thread. Async scope will not respond to the flow. For example, to execute a separate process which is time-consuming and independent of the main process then go for async scope.
 
+Q. What is APIkit router?
+
+APIkit router element does the following.
+
+• Generate flows from API specification - Scaffolding
+
+• Routes the incoming requests to specific flows.
+
+• Validates the request(payload, headers, URI params, query params) against RAML specification.
+
+• It serializes the responses.
+
+Q. What is APIkit console?
+
+Apikit Console is a web-based user interface that allows developers to interact with and test APIs built with the MuleSoft Anypoint Platform. It provides a graphical interface to explore APIs, view their specifications, and test them with real data. The console is built on top of the RAML specification and provides interactive documentation for the API, making it easier for developers to troubleshoot issues and debug their APIs.
+
+I
+
+Q. What is a connector in Mule?
+
+Connector is a Mulesoft component used to connect to an external system. The configuration properties depend on the type of connector used. For example, DB, FTP/SFTP connectors.
+
+Q. What is a transformer in Mule?
+
+It is used to transform the message from one format to another format or transform data.
+
 
 
