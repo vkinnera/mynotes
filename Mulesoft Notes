@@ -1195,4 +1195,18 @@ broker Url
 destination
 destination path
 
+Q. Explain Anypoint MQs. Why should we go for other MQs when we have Anypoint MQs?
+
+Anypoint MQ requires a separate license. It is a cloud messaging service that performs async messaging b/n applications. We should go for other MQs when You want to host apps on on-premises Based on the business requirements.
+
+Q. What is a queue?
+
+I
+
+A queue is a pipeline of messages where a message comes in and goes to just one subscriber. You should opt for a queue when there is a requirement for point to point communication.
+
+Q. What is a topic in messaging services?
+
+A topic is a pipeline of messages, where a message comes in and goes to every subscriber. You should for topic when there are multiple subscribers for the same message(pub-sub model).
+
 
