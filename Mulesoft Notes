@@ -1156,5 +1156,17 @@ Q. What is a transformer in Mule?
 
 It is used to transform the message from one format to another format or transform data.
 
+Q. What is Scatter Gather in Mule?
+Scatter-gather is a routing event processor that routes a mule event through all the routes in parallel. After processing the Mule events in parallel, it will create a new consolidated mule event which consists of events of different routes.
+
+• Output is an object of mule events of different routes.
+
+Total time taken by scatter-gather is the maximum time taken by one of the routes. I
+
+• It must have at least 2 routes otherwise error will happen.
+
+• It will raise MULE::; COMPOSITE ROUTING error when one of the routes fails.
+
+Payload and "HELLO" variable-SG 2 routes---> 1. Array of payload of different branches, New variable generated in one route, modified existing variable "HELLO WORLD"
 
 
