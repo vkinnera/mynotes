@@ -1195,6 +1195,8 @@ broker Url
 destination
 destination path
 
+Explain the operations of JMS connector?
+
 Q. Explain Anypoint MQs. Why should we go for other MQs when we have Anypoint MQs?
 
 Anypoint MQ requires a separate license. It is a cloud messaging service that performs async messaging b/n applications. We should go for other MQs when You want to host apps on on-premises Based on the business requirements.
@@ -1241,5 +1243,39 @@ Publish consume - It will wait for the response and acts synchronously.
 Q. What is the difference between Publish and Publish Consume in VM or JMS connectors?
 
 Publish is asynchronous and Publish Consume is synchronous
+Q. What is correlation ID?
+
+A correlation ID is a unique identifier string that is assigned automatically when an event is started. It would be easier to trace the journey of a request in a Mule application.
+
+Q. What is transaction ID?
+
+A transaction ID is a unique identifier string that is assigned explicitly to identify a specific business transaction's journey.
+
+Q. What is the difference between correlation ID and transaction ID?
+
+In MuleSoft, both fransaction ID and correlation ID help track messages, but they serve different purposes. The correlation ID helps link related messages across a flow, 
+especially in splitting and aggregation scenarios. Transaction IDs, on the other hand, are specifically for associating events with a business transaction for easier analysis and debugging.
+
+Q. What is an object store?
+
+Object store connector is a Mule component used to store data in key value pairs. It is mainly designed for storing watermarks, access tokens, user information etc. 
+There are two types i.e.. persistent and in-memory. In persistent object store, the data is available even after system crashes or app is redeployed. In in-memory object store, 
+the data is available till the app is up and running. It provides different operations.
+
+Q. What is a choice router?
+
+Whenever an event should be processed based on a certain condition then go for a choice router. Multiple routes can be specified based on the requirement. The event will be processed by the branch when the condition is met. N number of processors can be placed inside a branch.
+
+Q. What will be the expected output if all the conditions in the choice router are valid?
+
+It will execute the first matching condition.
+
+Q. How can you validate JSON and XML in MuleSoft?
+
+If the data exchange happens via RAML or OAS-based APIs, the APIkit router will validate the incoming request before routing it to the appropriate resource.
+
+If the JSON data exchange happens without API specification, add JSON module to your project from Exchange and use validate schema operation to validate the incoming JSON message.
+
+If the XML data exchange happens without API specification, add XML module to your project from Exchange and use validate schema operation to validate the incoming XML message.
 
 
