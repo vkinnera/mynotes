@@ -1278,4 +1278,18 @@ If the JSON data exchange happens without API specification, add JSON module to 
 
 If the XML data exchange happens without API specification, add XML module to your project from Exchange and use validate schema operation to validate the incoming XML message.
 
+It provides different operations.
 
+Store - It stores the given value using the given key
+
+Retrieve - It retrieves the value for the given key.
+
+Retrieve all keys - It retrieves all the keys in object store.
+
+Retrieve all - It retrieves all key -value pairs available in the object store.
+
+Contains - It checks if any value exists for the given key. If value is available, it returns true else false.
+
+Remove - It removes the value associated with the given key.
+
+Clear - It clears all keys and values associated with the object store.
