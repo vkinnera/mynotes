@@ -1329,3 +1329,21 @@ Resource coverage and code coverage are available after running the tests.
 Q. How do you create MUnit tests for error scenarios?
 
 Yes, we can handle errors with manual process but not with the recorder option.
+
+Q. How do you create MUnit tests for a batch process?
+
+Yes, we can handle errors with manual process but not with the recorder option.
+
+Q. What model do you follow, Agile or Waterfall?
+
+We follow Agile methodology. -
+
+Q. Explain flow reference.
+
+Flow reference can be used to call a flow, sub-flow, or private flow. The payload of child flow can be saved in a target variable for using it later.
+
+Q. How do you handle failed records in the batch process?
+
+In the first batch step, configure the accept policy as "no failed records" and max failed records to a number as per requirement, and process the records. 
+In the second batch step, keep accept policy as "only failed records" and then process the failed records. 
+If the records are failing again then insert them into a table or publish them to a dead letter queue.
