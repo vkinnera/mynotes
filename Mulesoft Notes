@@ -1293,3 +1293,27 @@ Contains - It checks if any value exists for the given key. If value is availabl
 Remove - It removes the value associated with the given key.
 
 Clear - It clears all keys and values associated with the object store.
+
+Q. Explain Salesforce configuration.
+
+Basic Authentication
+
+Oauth
+
+Q. Explain the different operations used in the Salesforce connector.
+
+List some important operations you have used
+
+Q. Explain the CI/CD approach you have followed.
+
+Yes, we follow the CI/CD process for deployment.
+
+• Firstly, check in the code to a central code repository such as Bitbucket or Github.
+
+Go to Jenkins to configure the properties such as code URL, environment to deploy, and skip MUnits. Then submit for deployment. It goes through certain steps and completes the deployment process successfully. If there is any issue can check the logs and troubleshoot.
+
+Go to the runtime manager and check whether the app is up and running successfully.
+
+Q. Do you have experience in setting up CI/CD pipelines?
+
+We have a separate DevOps team, so we didn't get a chance to write any scripts in Jenkins.
