@@ -1347,3 +1347,7 @@ Q. How do you handle failed records in the batch process?
 In the first batch step, configure the accept policy as "no failed records" and max failed records to a number as per requirement, and process the records. 
 In the second batch step, keep accept policy as "only failed records" and then process the failed records. 
 If the records are failing again then insert them into a table or publish them to a dead letter queue.
+
+what is anypoint monitering?
+It is used to moniter API's. We can moniter the number of requests received, number of responses sent, time taken for processing,
+Performace of API and so on.
