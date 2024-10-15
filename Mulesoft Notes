@@ -1351,3 +1351,8 @@ If the records are failing again then insert them into a table or publish them t
 what is anypoint monitering?
 It is used to moniter API's. We can moniter the number of requests received, number of responses sent, time taken for processing,
 Performace of API and so on.
+
+------------------------------------------------------------------------------------------------------------------------------
+ | Runtime Manager | Horizontal & Vertical Scaling | Deployment Strategies
+
+
