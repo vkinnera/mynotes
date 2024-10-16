@@ -1355,4 +1355,31 @@ Performace of API and so on.
 ------------------------------------------------------------------------------------------------------------------------------
  | Runtime Manager | Horizontal & Vertical Scaling | Deployment Strategies
 
+Runtime Manager:
+
+Q. What is Runtime manager?
+
+Runtime manager is a module of Anypoiny Platform which is used to deploy and manage Mule application on Mule runtime engine, where mule runtime is running on Cloudhub or on-premise or on RTF. By using runtime manage you can deploy/un-deploy, stop/restart the Mule application. You can also change the runtime version or increase/decrease the worker size.
+
+Q. What is vCore?
+
+vCore refers to a unit of compute capacity used on CloudHub platform. In 1 vCore, a maximum of 10 applications can be deployed where 8.1 vcore will be consumed by each Mule application. I
+
+Q. What is worker in MuleSoft?
+
+Worker is a dedicated Mule instance that runs your Mule application on CloudHub platform.
+
+Features of workers:
+
+Isolation: Each worker runs in a separate container from every other application Manageability: Each worker is deployed and managed independently Locality: Each worker runs in specific worker cloud such as US, EU or Asia-Pacific
+
+Capacity: Each worker has a specific amount of capacity to process data.
+
+Q. How many mule applications you can deploy in one worker of CloudHub?
+
+Only one Mule Application can be deployed in one worker.
+
+Q. What are the minimum and maximum Worker sizes available in CloudHub?
+
+8.1 vcore and 16 vcores are the minimum and maximum worker sizes available respectively in Cloudhub.
 
