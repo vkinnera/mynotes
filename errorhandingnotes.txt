@@ -1,0 +1,60 @@
+error handling concepts:
+
+system errors: 
+Mule throws a system error when an exception occurs at the system level and no Mule event is involved
+
+messaging errors:
+Mule throws a messaging error (a Mule error) whenever a problem occurs within a flow of a Mule app, 
+where Mule events and the messages they contain are processed.
+
+default error handling:
+By default, unhandled messaging errors are logged and propagated. When a flow is processing a Mule message that raises an error, 
+the normal execution of the flow stops, and the process transfers to the flow’s default error handler, which propagates the error.
+
+error handling scopes:
+On error propagate
+message not returned to main flow and gives 500 as status code
+On error continue
+message is returned to main flow and gives 200 as status code
+
+global level error handling:
+by creating subflow error handing we can refer that particular flow and do error like flow level error handling.
+
+error handling strategies:
+Application level error handling - default error handling
+Flow level error handling - Flow level , sub flow / child flow level
+
+- In subflow level error handling the error throw back (if it is on error propagate) to main flow return message if it is on error continue throw 200
+and does not return message if it is on error propagate throw 500.
+
+- In subflow level error handling  (if it is on error continue) it continue to next flow gives success message with status as 200
+
+process level error handling - try scope
+
+handling specific error handling / Error matching:
+It will go to specific error handing flow 
+
+Raise error:
+
+ports:
+8048
+8050
+8051
+8045
+8089
+8007
+
+
+ActiveMq topic notes:
+mq - enterprise 
+queue - indepent
+
+queue - single sender - single consumer
+
+topics/exchange - multiple customers
+
+FIFO queue - first in first out - sequential
+
+destininations - where 	ques and topics are created
+
+client apps - where client id and secret defined
