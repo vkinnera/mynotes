@@ -1383,3 +1383,15 @@ Q. What are the minimum and maximum Worker sizes available in CloudHub?
 
 8.1 vcore and 16 vcores are the minimum and maximum worker sizes available respectively in Cloudhub.
 
+Major difference between On premise/hybrid and cloudHub deployment in lla
+On premise/hybrid:
+need vpn(customer network) to hit API's
+need domain project to test
+host changes for each environments(QA,PROD)(host example: 172.21.7.120 and port varies for sys, biz,ux)
+It can be http call
+
+cloudHub:
+dont need vpn(customer network) to hit API's
+dont need domain project
+host + port  changes for environments(QA,PROD)(host + port: esb-test.lla.com)
+it can be https call
