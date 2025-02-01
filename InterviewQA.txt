@@ -430,8 +430,33 @@ How many days one sprint follow in your project
 
 
 
+Know question - answer in a short manner and ask them if they would like more in detail answer
+
+Unknown question - tell them can we come back to this question later 
 
 
+1. Most challenging task worked so far. Why is it challenging. What is the role you played to solve it
+
+
+Answer should be in STAR format 
+
+Situation  - why the problem occurred 
+Task - what is that you decided to do  ( the design to solve the problem )
+Action - how you actually done this ( using any techniques or tools )
+Result - as part of your solution what is achieved  and how it helped the team to reduce cost or to get rid of the problem 
+
+
+2. Why deloitte and how I would fit to this role 
+
+Give the interviewer confidence that I have so and so skills for 4 years and I am good in the area to problem solve 
+
+If I don’t know solution immediately I will strive hard to solve it myself and also will collaborate with team and senior engineers if I get stuck somewhere
+
+Overall I am very strong and will be great fit for this role with my right attitude. I will bring best to the company and fulfill the needs of the team and project 
+
+Ask questions both 
+
+- What this role that I am being hired. What is the most challenging thing I may need to solve or is there any tool/technnolgy that I need to learn specifically
 
 
 
