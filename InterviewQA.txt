@@ -318,6 +318,29 @@ now the refund is done from the backend and we get response like "refund is Inti
 transform message takes the request message and transformed into required mule format.
 
 
+Cognizant walkin face to face interview 
+ questions :
+Introduce your self
+Scatter gather and choice Router difference
+For each and parallel for each difference
+Object store and where we you use object store in your project
+What are the environments in your project
+Have you worked on raml
+Traits, fragments, datatypes
+Difference between traits and fragments
+How define policies in RAML
+Process of Deployment of projects in various environments in your project
+How scatter gather process input payload
+Does instance Id is same for all environments in your project or differs and also policies like client I'd enforcement
+What are the connectors you have worked on 
+In database connector how do you filter or configure  the query by using input query params or uri params 
+What are the error handling strategies you have used in your project and tell me about raise error on error propagate and on error continue and difference between them
+DataWeave coding:
+Question1
+Convert json to xml and filter the XML payload like <employee I = 9></employee>
+Question 2
+Compare the input object of two key value pairs where value is separated by | like a||b|c and if it is empty or null return false message
+
 
 
 
