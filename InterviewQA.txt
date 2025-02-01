@@ -368,6 +368,24 @@ What is the output format after database select operation in Mule?
 
 
 
+Hi, 3 months back I gave my interview.  I came accross these questions. 
+**Projects. 
+Cicd Pipelines
+Batch jobs
+Anypoint platform
+Team size
+Sprint time
+What are the technical challenges did you face earlier in your project( prepare well here) 
+About the salary exceptation( be careful here. Because they are looking for high skills for low salary. I said as per the company norms.)
+And your availability to join company. 
+Have a look on all importan topics like queues,connectors which you mentioned in your resume,policies,deployments, Raml, soap services, rest services, importance of mulesoft. Difference between mule 3 and myle 4.
+Any custom connectors that you used in your projects
+If you work for any migration like tibco to mulesoft Or any other migration . Please explicitly tell about that. Because they have more migration projects. 
+Client interaction ?? 
+Willing to work in rotational shifts?? 
+Why only mulesoft is being used despite of other integration tools?? 
+If you have any gaps in employment,justify that.
+
 
 
 
