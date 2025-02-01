@@ -384,6 +384,34 @@ OUTPUT:
 Question 2
 Compare the input object of two key value pairs where value is separated by | like a||b|c and if it is empty or null return false message
 
+payload:
+{
+    "key1": "a||b|c",
+    "key2": "a|b||c"
+
+}
+dataweave:
+%dw 2.0
+output application/json
+var pd1 = (payload.key1 default "") splitBy "|"
+var pd2 = (payload.key2 default "") splitBy "|"
+
+var result = 
+    if (isEmpty(pd1) or isEmpty(pd2))
+        "False - One or both values are empty or null"
+    else if (sizeOf(pd1) != sizeOf(pd2)) 
+        false
+    else 
+        pd1 == pd2
+---
+{
+    result: result
+}
+output:
+{
+  "result": false
+}
+
 
 Deloitte mulesoft interview
 TELL ME ABOUT YOURSELF
