@@ -404,7 +404,29 @@ What methods are used for the specific use case
 Have you worked on file FTP and SFTP connectors
 
 
+Deloitte interview and INFOSYS interview 
+Deloitte interview 
+Tell me about your self
+Scenario where developing api led architecture is not applicable
+What are connector you have been worked
+Deep inside connectors configurations
+Explain vcore and worker
+Secure properties in RAML
+Have you worked on cloud hub 2.0
+Have you worked on any other deployments other than cloud hub and on Prem and what are they
+Secure By and secure schema in RAML
+How can you handle huge amount of data within 0.1 vcore suppose USING DB connector 
 
+INFOSYS 
+Tell me about your self 
+Do you have knowledge on java
+What connectors you have work on
+Object store jms, database and so on
+Error handling scenario
+DataWeave code on reversing a string or number or statement
+Have you followed agile methodology in  project
+Tell me the day to day activities that are followed in your project
+How many days one sprint follow in your project
 
 
 
