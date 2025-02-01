@@ -338,6 +338,54 @@ What are the error handling strategies you have used in your project and tell me
 DataWeave coding:
 Question1
 Convert json to xml and filter the XML payload like <employee I = 9></employee>
+PAYLOAD:
+[
+   {
+      "id":7,
+      "name":"Alice",
+      "department":"IT"
+   },
+   {
+      "id":9,
+      "name":"Bob",
+      "department":"HR"
+   },
+   {
+      "id":12,
+      "name":"Charlie",
+      "department":"Finance"
+   }
+]
+DATAWEAVE CODE:
+%dw 2.0
+output application/xml
+---
+{
+  employees: 
+    (payload filter (emp) -> emp.id == 8) 
+    map (emp) -> {
+      employee @("id": emp.id): {
+        name: emp.name,
+        department: emp.department
+      }
+    }
+}
+OUTPUT:
+%dw 2.0
+output application/xml
+---
+{
+  employees: 
+    (payload filter (emp) -> emp.id == 9) 
+    map (emp) -> {
+      employee @("id": emp.id): {
+        name: emp.name,
+        department: emp.department
+      }
+    }
+}
+
+
 Question 2
 Compare the input object of two key value pairs where value is separated by | like a||b|c and if it is empty or null return false message
 
