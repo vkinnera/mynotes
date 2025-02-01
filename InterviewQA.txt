@@ -388,7 +388,20 @@ If you have any gaps in employment,justify that.
 
 
 
-
+ACCENTURE 
+Introduction 
+Tell me about your project
+How can we define multiple queryParams in URL
+What kind deployment models are there in mulesoft
+Why we use API LED Architecture 
+More about designing RAML like syntax based questions that are used in traits and datatypes
+Regarding Oath policies
+Which third party vendor for getting Oath token
+API auto discovery
+How to trigger an API what is the connector used to trigger an API. 
+Syntax FOR FRAMING URL
+What methods are used for the specific use case
+Have you worked on file FTP and SFTP connectors
 
 
 
