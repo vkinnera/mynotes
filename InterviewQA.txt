@@ -27,6 +27,10 @@ Ans:
 TRAITS:
 traits is reusable component where we can define headers, queryParams, URI params inside traits.
 
+
+object store:
+https://medium.com/@adityaWritesBlog/exploring-object-store-connector-mulesoft-0bee9867a662
+
 Traits is used for headers and queryParameters -- 
 Traits should be imported using "Traits" keyword(by creating key: !include filePath) 
 and it is referred using "is" keyword with these[]( is:[headersname,.....,...]traits:
