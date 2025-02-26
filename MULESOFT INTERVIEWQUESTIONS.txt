@@ -18,6 +18,7 @@ when horizantal scaling/ vertical scaling will be applicable for the above scena
 16) what is the major advantage of using the API LED architecture?
 18) what is topic and what is topic and how do you face the error in while configuring 
 in connector?
+19) Is vcores and workers fixed in cloudhub 1.0 or we can use autoscaling if the application size increases or payload size increases?
 #################################################################################################################################
 TCS MULESOFT HYDERABAD WALKIN
 What is Parallel foreach and for each how can you make parallel for as sequential ?
