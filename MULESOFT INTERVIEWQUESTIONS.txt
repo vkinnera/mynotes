@@ -1,0 +1,263 @@
+TCS MULESOFT HYDERABAD WALKIN
+What is Parallel foreach and for each how can you make parallel for as sequential ?
+What is cache and object store and time to live  and what is persistent storage and transient storage and difference between them?
+Have you worked on Salesforce connectors 
+What connectors you have worked on?
+What is the error that occurs in scatter gather ?
+Have you worked on conversion project 
+What is difference between session variable and flow variables?
+What is difference between mule 3 and mule 4
+Explain mule message structure ?
+What is inbound properties and outbound properties in mule 3?
+Max concurrency in for each and parallel for each ?
+What is transaction management in mulesoft 
+Like XA transaction ?
+Have you worked on any point mq like it contains fifo queues and queues and topics?
+Have you worked on Java?
+Are you using parent POM in your project ?
+Difference between parent POM and POM file?
+Have you worked on batch processing ?
+What are deployment models used in your project ?
+What is instance id and 
+what is API manager and 
+what are the policies you have used in your project and every API have different instance id and 
+can we use same instance id two different apis?
+#########################################################################
+ACCENTURE INTERVIEW 
+Introduction 
+Tell me about your project
+How can we define multiple queryParams in URL
+What kind deployment models are there in mulesoft
+Why we use API LED Architecture 
+More about designing RAML like syntax based questions that are used in traits and datatypes
+Regarding Oath policies
+Which third party vendor for getting Oath token
+API auto discovery
+How to trigger an API what is the connector used to trigger an API. 
+Syntax FOR FRAMING URL
+What methods are used for the specific use case
+Have you worked on file FTP and SFTP connectors
+#########################################################################
+Deloitte interview 1
+Tell me about your self
+Scenario where developing api led architecture is not applicable
+What are connector you have been worked
+Deep inside connectors configurations
+Explain vcore and worker
+Secure properties in RAML
+Have you worked on cloud hub 2.0
+Have you worked on any other deployments other than cloud hub and on Prem and what are they
+Secure By and secure schema in RAML
+How can you handle huge amount of data within 0.1 vcore suppose USING DB connector 
+############################################################################
+INFOSYS 
+Tell me about your self 
+Do you have knowledge on java
+What connectors you have work on
+Object store jms, database and so on
+Error handling scenario
+DataWeave code on reversing a string or number or statement
+Have you followed agile methodology in  project
+Tell me the day to day activities that are followed in your project
+How many days one sprint follow in your project
+#################################################################
+Hi, 3 months back I gave my interview.  I came accross these questions. 
+**Projects. 
+Cicd Pipelines
+Batch jobs
+Anypoint platform
+Team size
+Sprint time
+What are the technical challenges did you face earlier in your project( prepare well here) 
+About the salary exceptation( be careful here. Because they are looking for high skills for low salary. I said as per the company norms.)
+And your availability to join company. 
+Have a look on all importan topics like queues,connectors which you mentioned in your resume,policies,deployments, Raml, soap services, rest services, importance of mulesoft. Difference between mule 3 and myle 4.
+Any custom connectors that you used in your projects
+If you work for any migration like tibco to mulesoft Or any other migration . Please explicitly tell about that. Because they have more migration projects. 
+Client interaction ?? 
+Willing to work in rotational shifts?? 
+Why only mulesoft is being used despite of other integration tools?? 
+If you have any gaps in employment,justify that.
+#####################################################################################################################################################################
+ Deloitte mulesoft interview 2
+TELL ME ABOUT YOURSELF
+SDLC - SOFTWARE DEVELOPMENT LIFE CYCLE
+FOR EACH AND PARALLEL FOR EACH AND DIFFERENCE BETWEEN THEM
+TELL ME ABOUT FRAGMENTS IN RAML
+HOW DO YOU ENCRPT DATA IN PROPERTY FILES 
+WHICH CODE QUALITY TOOL YOU HAVE USED IN YOUR PROJECT
+WHAT ARE THE CHANGES ARE DONE AT THE CODE LEVEL 
+WHILE MIGRATING FROM CLOUD 1.0 AND CLOUD HUB 2.0
+WHICH RUNTIME VERSION HAVE YOU USED IN YOUR PROJECT
+WHICH MAVEN VERSION HAVE YOU USED IN YOUR AND TELL ME ABOUT MULE MAVEN PLUGIN
+WHAT ARE THE CONNECTORS HAVE YOU USED IN YOUR PROJECT
+WHY WE GENERATE JARS USING JFROG 
+WHAT IS THE CODE VERSION / REPO TOOL YOU HAVE USED IN YOUR PROJECT
+HOW DO YOU PASS PROPERTY VALUES WHILE RUNNING MULE PROJECT
+DO YOU KNOW ABOUT MULE-ARTIFACT.JSON
+TELL ME THE SYNTAX TO READ THE SECURE PROPERTIES FROM THE PROPERTY FILE
+AND HOW DO YOU ACCESS PROPERTIES
+WHAT IS THE DEPLOYMENT TOOL YOU HAVE USED IN YOUR PROJECT 
+AND WHAT IS JENKINS FILE
+WHAT THE ENVIRONMENTS THAT YOU HAVE USED FOR CODE REPO'S
+What is the output format after database select operation in Mule?
+##############################################################################
+ Cognizant walkin face to face interview 
+ questions :
+Introduce your self
+Scatter gather and choice Router difference
+For each and parallel for each difference
+Object store and where we you use object store in your project
+What are the environments in your project
+Have you worked on raml
+Traits, fragments, datatypes
+Difference between traits and fragments
+How define policies in RAML
+Process of Deployment of projects in various environments in your project
+How scatter gather process input payload
+Does instance Id is same for all environments in your project or differs and also policies like client I'd enforcement
+What are the connectors you have worked on 
+In database connector how do you filter or configure  the query by using input query params or uri params 
+What are the error handling strategies you have used in your project and tell me about raise error on error propagate and on error continue and difference between them
+DataWeave coding:
+Question1
+Convert json to xml and filter the XML payload like <employee I = 9></employee>
+Question 2
+Compare the input object of two key value pairs where value is separated by | like a||b|c and if it is empty or null return false message
+#############################################################################################################################
+Mulesoft Interview Questions 
+1. How many ways we can secure our API?
+2. Difference between fragment and library?
+3. Horizontal scaling vs Vertical scaling? example
+4. Oath 2.0 implementation? How it works?
+5. API Led connectivity architecture? And do we need all the 3 layers always?
+6. Difference between Rate limiting vs Spike control policy?
+7. How circuit breaker works?
+8. 1 way SSL vs 2 way SSL?
+9. How to throw an error at APIkit router if we pass any extra field from postman?
+10. How scatter gather works? And can we make scatter gather sequencial ?
+11. Queue vs Topic? example
+12. Different types of ACK modes?
+13. Can we define two URI params under single resource? And how?
+14. What are the different types of scopes in mule?
+15. Difference between reconnection strategy vs until successful?
+16. Difference between cache and Object store? And it's configurations 
+17. Difference between post , put and patch?
+18. Difference between localhost and 0.0.0.0?
+19. Difference between flow, subflow and private flow?
+20. How to call a flow using dataweave?
+21. Use of correlationID? And it's importance?
+22. Mulesoft best practices?
+23. Use of DB pooling?
+24. How to handle large amount of payloads?
+25. Difference between CH 1.0 vs 2.0?
+26. How can we mask the properties from runtime?
+27. What pom.xml contains?
+28. How many ways that we can deploy our application?
+29. What is zero downtime?
+30. Difference between connection idle timeout and response timeout?
+31. How do you troubleshoot the issue in production?
+32. How do you resolve the conflicts?
+33. How to access secure property inside dataweave?
+34. How can you raise error explicitly in Mule flow/subflow? 
+35. Can we raise an error inside dataweave?
+36. How many mule applications you can deployed in one worker in Cloudhub
+37. What is minimum and maximum Worker size available in Cloudhub?
+38. In which time zone MuleSoft scheduler runs?
+39. What happens to your logs when you delete mule application from Cloudhub?
+40. Difference between persistent and In-memory?
+##############################################################################
+INFOSYS INTERVIEW: OLD
+self Intro  
+Components in raml?  
+api life cycle  
+whats are the ways to import raml to the studio and explain them  
+apikit console --scenario based  
+In API implementation mule provide APIKit router for routing messages, validating payloads, headers, queryParams and URI params against the RAML. 
+api exchange, cloudhub --scenario based  
+how scaling can be done  
+about logs --scenario based  
+dataweave -- on map, odd even, pluck in playground  
+diff between rest and soap  
+parallel for each --scenario based  
+database connector --scenario based  
+batch processing --scenario based  
+http listner configurations  
+policies used in project  
+how do you protect your code in project  
+how do you get api instance id  
+how do you connect your runtime api to configure policies  
+how do you generate flows in studio if they are not generated automatically  
+error handling --scenario based  
+Type of error handling used in your project  
+api led connectivity --scenario based  
+salesforce connector  
+cache and object store  
+munits in project  
+flows in project  
+ssl and tls  
+keystore and Truststore and how do you get keys  
+how to configure ssl and tls in listner  
+how do you update raml and import 
+##########################################################
+ACCENTURE INTERVIEW - OLD 
+1) Mulesoft API end to end process.  
+2) traits vs fragments.  
+3)how do we do validation in raml?  
+4)how do we hand over raml to client after designing.
+ 5)post vs put vs  patch.  
+ 6)need of put & post.  
+7)foreach vs parallel foreach   
+8)scatter-gather.  
+9)spike control vs rate limiting policy.  
+10)Munits.  
+11)deployment model (through jenkinspipeline).    
+12)vcore vs worker.  
+13)error handling.  
+14)VM vs flow refference.  
+15)Active MQ.  
+16)issues faced in production,deployment.  
+17)object store,cache.  
+18)load balancer.  
+19)data weave (string to array, reverse, multivalue selector).  
+20)scenario based questions on try scope,scatter-gather, re-connection stratgy.  
+21)self Intro  
+22)roles and responsibilites in project  
+23)message structure in IBM mq?  
+24)default port no for IBM mq?  
+25)what are the basic steps to develop an API?  
+26)how can you secure your password?  
+27)what is the pooling mechanism? it is like how can you secure a password  
+28)what are the 5 ways of security authentications  
+29)what is TLS and MTLS?  
+30)what is the keyStore and trustStore?  
+31)error handlings in mule?   
+32)have you heard about API Groups?  
+33)have you develop any custom connector?  
+34)dataweave streaming in mule?    
+35)xplain Oauth2.0 provider in mule? why we are using?  
+36)what are grant Types in Oauth2.0?  
+37)rate limiting policy?  
+38)what is horizontal and vertical scaling?  
+39)xplain batch processing?  
+40)what happens if a batch is having 200 records if one got failed?  
+41)how many records can we process in a batch?  
+42)can we call batch fom trigger?  
+43)map vs mapObject?  
+44)what is Idempotency?what is this use  
+45)what is scheduler?  
+46)which flow can we call from lookup function?  
+47)how to handel error in process layer?  
+48)what is the output for for each?  
+49)what is the file we used to secure password?  
+50)what is CI/Cd pipeline?have you used in your project?  
+51)how to improve the performance of an application?  
+52)how do you setup the dependencies in your project?  
+53)if you need to save the state of the transaction and then resume it if it fails?  
+54)what is synchronous and asynchronous?   
+55)what is diff b/w api kit router and api ki console?  
+56)can we validate the incoming payload from RAML?  
+57)what dataweave inbuild functions you used?  
+58)how can we call flows from dataweave?  
+59)have you involved in documentation side or deployment side?  
+60)have you created any proxys in api manager?  
