@@ -1,3 +1,24 @@
+EY Online interview Questions
+1) tell me about your self?
+2) tell me about your project?
+3) what is the difference between cloudhub 1.0 and cloudhub 2.0?
+4) which connectors you have worked on?
+5) what is anypointMq connector?
+6) what are the various ack modes in anypointMQ?
+7) what is ack nack and dead letter queue?
+8) what is publish and subscriber in anypoint MQ?
+9) Have you worked on SAP and salesforce connectors?
+10) what is CICD process that you follow in your project?
+11) what is water marking in db connectors?
+12) Have you worked on batch processing?
+13) what is the variable batch before and after batch like the value will change or not?
+14) have you work on muleSoft code builder?
+15) scenario based vcores and workers when do we increase vcore and worker and 
+when horizantal scaling/ vertical scaling will be applicable for the above scenarios?
+16) what is the major advantage of using the API LED architecture?
+18) what is topic and what is topic and how do you face the error in while configuring 
+in connector?
+#################################################################################################################################
 TCS MULESOFT HYDERABAD WALKIN
 What is Parallel foreach and for each how can you make parallel for as sequential ?
 What is cache and object store and time to live  and what is persistent storage and transient storage and difference between them?
