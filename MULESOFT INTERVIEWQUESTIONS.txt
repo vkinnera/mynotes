@@ -1,3 +1,10 @@
+TCS MULESOFT HYDERABAD WALKIN MAR 1
+What are the connectors you have used in your project?
+Error handling in your project?
+Anypoint MQ related questions?
+Scenarios why we use Anypoint MQ?
+Error handling in Anypoint MQ?
+############################################################
 EY Online interview Questions
 1) tell me about your self?
 2) tell me about your project?
@@ -20,7 +27,7 @@ when horizantal scaling/ vertical scaling will be applicable for the above scena
 in connector?
 19) Is vcores and workers fixed in cloudhub 1.0 or we can use autoscaling if the application size increases or payload size increases?
 #################################################################################################################################
-TCS MULESOFT HYDERABAD WALKIN
+TCS MULESOFT HYDERABAD WALKIN FEB 22
 What is Parallel foreach and for each how can you make parallel for as sequential ?
 What is cache and object store and time to live  and what is persistent storage and transient storage and difference between them?
 Have you worked on Salesforce connectors 
