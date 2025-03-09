@@ -77,6 +77,21 @@ output:
         ]
     }
 ]
+ANSWER:
+%dw 2.0
+output application/json
+---
+payload map {
+    "name": payload[$$].name,
+    "value": $$ + 1,
+        "info": [
+            {
+                "company": payload.info[$$][0].company,
+                "loc": payload.info[$$][0].loc,
+                "value": $$ + 1
+            }
+        ]
+}
 ##################################################################################
 TCS MULESOFT HYDERABAD WALKIN MAR 1
 What are the connectors you have used in your project?
