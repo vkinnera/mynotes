@@ -1,3 +1,83 @@
+COGNIZANT INTERVIEW QUESTIONS 8TH MARCH 2025
+Introduce your self
+project Overview
+parallel for each - scenari based
+object store and cache and difference between them - scenario based
+batch processing - scenario based
+Anypoint MQ - scenario based
+database connectors - scenaio based
+munit - scenario based
+until successful - scenario based
+HTTP Connectors - Scenario based
+how do handle huge payload
+DATAWEAVE Question:
+input:
+[
+    {
+        "name": "vamsi",
+        "info": [
+            {
+                "company": "cg",
+                "loc": "BLR"
+            }
+        ]
+    },
+    {
+        "name": "revi",
+        "info": [
+            {
+                "company": "INFY",
+                "loc": "HYD"
+            }
+        ]
+    },
+    {
+        "name": "gnani",
+        "info": [
+            {
+                "company": "FIS",
+                "loc": "MAS"
+            }
+        ]
+    }
+]
+output:
+[
+    {
+        "name": "vamsi",
+        "value": 1,
+        "info": [
+            {
+                "company": "cg",
+                "loc": "BLR",
+                "value": 1
+            }
+        ]
+    },
+    {
+        "name": "revi",
+        "value": 2,
+        "info": [
+            {
+                "company": "INFY",
+                "loc": "HYD",
+                "value": 2
+            }
+        ]
+    },
+    {
+        "name": "gnani",
+        "value": 3,
+        "info": [
+            {
+                "company": "FIS",
+                "loc": "MAS",
+                "value": 3
+            }
+        ]
+    }
+]
+##################################################################################
 TCS MULESOFT HYDERABAD WALKIN MAR 1
 What are the connectors you have used in your project?
 Error handling in your project?
