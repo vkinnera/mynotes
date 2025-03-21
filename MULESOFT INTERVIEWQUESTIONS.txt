@@ -1,3 +1,14 @@
+IBM mulesoft interview questions 
+Introduction 
+Project explanation 
+How do you call dynamic flow
+Difference between choice router and parallel for each 
+How do you call custom function 
+How do you call flow from dataweave 
+What is mule artifact.json
+How do you do validation at RAML level
+What are the dataweave functions you used in your project 
+#################################################
 COGNIZANT INTERVIEW QUESTIONS 8TH MARCH 2025
 Introduce your self
 project Overview
