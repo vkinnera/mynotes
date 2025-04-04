@@ -3256,7 +3256,84 @@ Explain readUrl in dataweave?
 readUrl is used to read the URL or file and returns the content in it.
 readUrl('classpath://<path of dwl file>', 'applicatio/json')
 
+output application/json
+/*
+dataweave functions - 
+sizeOf - done,
 
+map - done, 
+mapObject, 
+filter - done, 
+update - done
+last - done
+mapObject - done
+filterObject, orderBy, 
+groupBy - done, 
+distinctBy - done, 
+keysOf - done , 
+valuesOf - done,
+reduce, 
+flatten - done, 
+pluck, 
+splitBy - done , 
+date - done etc
+lookUp function
+dateTime formatting
+*/
+
+%dw 2.0
+import * from dw::util::Values
+import * from dw::core::Strings
+output application/json skipNullOn = "everyWhere"
+---
+
+//flatten(valuesOf(payload)) distinctBy ((item, index) -> item)
+//payload.AU groupBy ((item, index) -> substringAfter(item,"-")[0 to 3])
+/*
+ payload map ((item, index) ->{
+"EmpName": item.name,
+"BossName": (payload filter $.ID == item.bossID).name[0]
+
+} )*/
+//payload[0] - "ID"
+//payload splitBy  (/[@,#,$,%]/)
+//payload map ((item, index) -> ((item splitBy  ":")[0] ): (item splitBy ":")[1])
+//(1 to payload[0]) map  randomInt(100)
+//(flatten(payload scan  /\d/) joinBy  "") as Number
+//sizeOf(payload)
+/*
+{
+    "keys": keysOf(payload),
+    "values": valuesOf(payload)
+}
+/*
+/*
+{
+    keys:keysOf(payload),
+    values:valuesOf(payload)
+}
+*/
+/*
+payload map(v,k)-> {
+    (v mapObject ((value, key, index) -> {
+        "hammingDistance": key hammingDistance value
+    }))
+}
+*/
+//payload mapObject ("$(upper($$))":$)
+//payload mapObject ((value, key, index) -> "$(upper(key))": value)
+//payload.string countCharactersBy ((character) -> isAlpha(character))
+//payload map ((item, index) -> item.num last 3)
+//payload map ("$$": $) 
+//payload map ((item, index) -> item update "company" with "capgemini")
+/*
+payload map ((item, index) -> {
+    "name": item.name
+})
+*/
+//now() as Date {format: "yyyy-MM-dd"}
+//payload filter isEven($)
+//((item, index) -> (item mod 2) == 0)
 
 
  
