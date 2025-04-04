@@ -1,3 +1,18 @@
+Cognizant Mulesoft Chennai walkin Interview questions 
+Tell me about yourself 
+Tell me about your project 
+Where this muleSoft is applicable in your project 
+Anypoint MQ , mongo db , batch processing, cache, object store scenario based questions 
+For each parallel for each
+RAML structure in your project
+After design of RAML and publishing what do do if client asks for initial project response
+Error handling scenario based questions 
+Did you trained your juniors
+Deployment model in your project and cicd process 
+Which runtime version you have worked on in mulesoft 
+Have you work onprem and cloud hub based apis
+3 layer architecture scenario based
+##########################################
 IBM mulesoft interview questions 
 Introduction 
 Project explanation 
