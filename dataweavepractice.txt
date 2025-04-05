@@ -3284,9 +3284,41 @@ dateTime formatting
 %dw 2.0
 import * from dw::util::Values
 import * from dw::core::Strings
-output application/json skipNullOn = "everyWhere"
+output application/json
 ---
+(payload.number splitBy ('')) filter (isNumeric($)==true)
 
+/*{
+ "eq1": "true"==true,
+ "eq2": "true"~=true,
+ "eq3": "789"==789,
+ "eq4": "789"~=789,
+ "eq5": ["true"]==[true],
+ "eq6": ["true"]~=[true]
+}*/
+//now() >> "IST"
+//payload filterObject ((value, key, index) -> sizeOf(value)!=0)
+/*
+payload map ((item, index) -> (
+ item mapObject(v,k,i)->{
+ ("user" ++ index+1):v
+ }
+)
+)
+*/
+//payload - "fname" - "lname"
+//payload.name splitBy  " " distinctBy ((item, index) -> item)
+//payload.a filter (payload.b contains  $ )
+//payload filter (($ endsWith  "csv") or($ endsWith  "xlsx") )
+/*
+{
+ "ASCII Value":charCode(payload."ASCII Value"),
+ "Char at ASCII":fromCharCode(payload."Char at ASCII" as Number)
+}
+*/
+//floor(payload)
+//(payload filter $.city == "hyd").name joinBy  ","
+//payload reduce ((item, accumulator) -> accumulator ++ item )
 //flatten(valuesOf(payload)) distinctBy ((item, index) -> item)
 //payload.AU groupBy ((item, index) -> substringAfter(item,"-")[0 to 3])
 /*
@@ -3334,6 +3366,5 @@ payload map ((item, index) -> {
 //now() as Date {format: "yyyy-MM-dd"}
 //payload filter isEven($)
 //((item, index) -> (item mod 2) == 0)
-
 
  
